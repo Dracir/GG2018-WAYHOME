@@ -2,13 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum MoveSpeeds
+{
+    Slow,
+    Medium,
+    Fast
+}
+
 public class AIMotion : MonoBehaviour
 {
 
 
 	public bool LookAtThePlanet;
+    public MoveSpeeds moveSpeed = MoveSpeeds.Medium;
 
-
+    protected float GetMoveSpeed (MoveSpeeds value)
+    {
+        switch (value)
+        {
+            case MoveSpeeds.Slow:
+                return 0.5f;
+            case MoveSpeeds.Medium:
+                return 0.8f;
+            case MoveSpeeds.Fast:
+                return 1.1f;
+            default:
+                return 0;
+        }
+        
+    }
 
 	protected void lookAtPlanet()
 	{

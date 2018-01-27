@@ -5,7 +5,7 @@ using UnityEngine;
 public class TunnelingMove : AIMotion
 {
 
-	public float GravitySpeed;
+	private float GravitySpeed;
 
 	public float TunnelingCooldown;
 
@@ -26,6 +26,7 @@ public class TunnelingMove : AIMotion
 	// Use this for initialization
 	void Start()
 	{
+        GravitySpeed = GetMoveSpeed(moveSpeed);
 		ActualTunnelingDistance = Random.Range(MinTunnelingDistance, MaxTunnelingDistance);
 		originX = transform.position.x;
 		//Debug.Log(originX);
