@@ -53,29 +53,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Levels:
   - Symbols:
-    - Symbol: 1
-      Sprite: {fileID: 21300000, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
-    - Symbol: 2
-      Sprite: {fileID: 21300030, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - {fileID: 11400000, guid: 8d83d9ccacb6cab49847f7c5214760ec, type: 2}
+    - {fileID: 11400000, guid: 580eab68121100c4583004a874377c82, type: 2}
     Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
   - Symbols:
-    - Symbol: 3
-      Sprite: {fileID: 21300036, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - {fileID: 11400000, guid: 765176ebf1f9b0941a7e03a064f00d4d, type: 2}
+    - {fileID: 11400000, guid: eba059f608343074f802f07365662ec6, type: 2}
     Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
   - Symbols:
-    - Symbol: 2
-      Sprite: {fileID: 21300056, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
-    - Symbol: 3
-      Sprite: {fileID: 21300070, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
-    - Symbol: 4
-      Sprite: {fileID: 21300064, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - {fileID: 11400000, guid: 61d2e14030a0c3e4caf29089ff4d5199, type: 2}
+    - {fileID: 11400000, guid: b3cf6a6c06f5e4d43a6b969e79a84056, type: 2}
+    - {fileID: 11400000, guid: 9f62b1c853194a24782bbd4fa236054b, type: 2}
+    - {fileID: 11400000, guid: 843b038f67ff3dc4197490752826848e, type: 2}
     Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
