@@ -7,10 +7,17 @@ public class Screen : CachedBehaviour<Screen>
 	public Sprite[] Noise;
 	public SpriteRenderer Renderer;
 
-	public void SetSprite(Sprite sprite)
+	LevelManager.Pair selected;
+
+	public void Select(LevelManager.Pair pair)
 	{
-		StopAllCoroutines();
-		StartCoroutine(SetSymbolRoutine(sprite));
+		if (selected == pair) return;
+		else
+		{
+			selected = pair;
+			StopAllCoroutines();
+			StartCoroutine(SetSymbolRoutine(selected.Sprite));
+		}
 	}
 
 	IEnumerator SetSymbolRoutine(Sprite sprite)
