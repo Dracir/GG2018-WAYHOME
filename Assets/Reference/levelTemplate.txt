@@ -1,0 +1,25 @@
+Customizable elements for each level
+
+Level X:
+	Creatures:
+		Creature 1:
+			Shape (0-3)
+			Colour (0-3)
+			Appendages (0-3)
+			Movement type (straight, sine, teleport)
+			Movenet speed
+			Oscillation width
+		Creature N:
+			etc.
+	Symbols: (enum with description for each)
+		0: Symbol 3
+		1: Symbol 4
+		2: Symbol 14
+		3: Symbol N
+	Spawn times:
+		Spawn 1: 0 seconds
+		Spawn 2: 1 seconds
+		Spawn 3: 5 seconds
+		Spawn 4: 6 seconds
+		Spawn 5: 10 seconds
+		
