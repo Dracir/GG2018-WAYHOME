@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4566138569169756}
   - component: {fileID: 212911764911372886}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 212911764911372886}
+  LifeGivingHopeAndLoveSymbol: 0
 --- !u!212 &212911764911372886
 SpriteRenderer:
   m_ObjectHideFlags: 1

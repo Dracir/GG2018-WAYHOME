@@ -6,6 +6,10 @@ public class Creature : CachedBehaviour<Creature>
 	// TODO replace code with something useful...
 	public SpriteRenderer Renderer;
 
+	public Symbol LifeGivingHopeAndLoveSymbol;
+
+	public Symbol Symbol {get{return LifeGivingHopeAndLoveSymbol;}}
+
 	void Start()
 	{
 		// Change the color to differentiate creatures while there is no graphics for them...
