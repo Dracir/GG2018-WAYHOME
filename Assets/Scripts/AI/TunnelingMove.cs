@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tunneling : AIMotion
+public class TunnelingMove : AIMotion
 {
 
 	public float GravitySpeed;

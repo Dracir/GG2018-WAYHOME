@@ -14,7 +14,11 @@ public class SinMove : AIMotion {
 	private float lastX;
 	
 	void Start () {
+		var x = Mathf.Clamp(transform.position.x,CameraTop.Instance.Left + Amplitude , CameraTop.Instance.Right - Amplitude);
+		transform.position = new Vector3(x,transform.position.y);
+
 		lastX = Amplitude * Mathf.Sin( Frequency * Time.time + Offset) ;
+		
 	}
 	
 	// Update is called once per frame
