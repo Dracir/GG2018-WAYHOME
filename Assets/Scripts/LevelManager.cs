@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
-{
-	[Serializable]
-	public class Pair
-	{
-		public Symbol Symbol;
-		public Sprite Sprite;
-	}
+{	
 
 	[Serializable]
 	public class Level
 	{
-		public Pair[] Symbols;
+		public SymbolData[] Symbols;
 		public Creature[] Creatures;
 	}
 

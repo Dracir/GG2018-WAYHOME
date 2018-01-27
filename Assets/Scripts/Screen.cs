@@ -7,9 +7,9 @@ public class Screen : CachedBehaviour<Screen>
 	public Sprite[] Noise;
 	public SpriteRenderer Renderer;
 
-	LevelManager.Pair selected;
+	SymbolData selected;
 
-	public void Select(LevelManager.Pair pair)
+	public void Select(SymbolData pair)
 	{
 		if (selected == pair) return;
 		else

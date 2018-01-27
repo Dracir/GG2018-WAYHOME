@@ -69,12 +69,15 @@
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\SpaceZone.cs" />
+     <Compile Include="Assets\Scripts\SymbolData.cs" />
+     <Compile Include="Assets\Scripts\SymbolManager.cs" />
      <Compile Include="Assets\Scripts\Transitions\ColorTransition.cs" />
      <Compile Include="Assets\Scripts\Transitions\TransformTransition.cs" />
      <Compile Include="Assets\Scripts\Transmission.cs" />
      <Compile Include="Assets\Scripts\Transmitter.cs" />
      <Compile Include="Assets\Scripts\TransmitterController.cs" />
      <Compile Include="Assets\Scripts\UI\Progress.cs" />
+     <Compile Include="Assets\Scripts\Utils\Utils.cs" />
      <None Include="Assets\Reference\levelTemplate.txt" />
      <None Include="Assets\Resources\empty.txt" />
      <None Include="Assets\Textures\empty.txt" />
