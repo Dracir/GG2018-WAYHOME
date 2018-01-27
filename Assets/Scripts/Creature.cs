@@ -56,7 +56,7 @@ public class Creature : CachedBehaviour<Creature>
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 
-		// Kevin play giblits
+		ParticleManager.Instance.GutExplosion(transform.position);
 		Destroy(gameObject);
 	}
 
