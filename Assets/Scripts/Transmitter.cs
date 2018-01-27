@@ -6,7 +6,7 @@ public class Transmitter : CachedBehaviour<Transmitter>
 	public Screen Screen;
 
 	int selectedIndex;
-	LevelManager.Pair selectedPair;
+	SymbolData selectedPair;
 
 	void Update()
 	{

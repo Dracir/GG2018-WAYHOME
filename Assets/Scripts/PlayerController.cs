@@ -14,7 +14,7 @@ public class PlayerController : CachedBehaviour<PlayerController>
 	void UpdateRotation()
 	{
 		var direction = Player.Body.position - (Vector2)Planet.Instance.transform.position;
-		Player.Body.rotation = -Vector2.Angle(Vector2.up, direction);
+		Player.Body.MoveRotation(-Vector2.Angle(Vector2.up, direction));
 	}
 
 	void UpdatePosition()

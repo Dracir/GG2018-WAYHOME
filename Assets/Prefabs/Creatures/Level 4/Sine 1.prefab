@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 114048808053318188}
   - component: {fileID: 50322748971137662}
   m_Layer: 0
-  m_Name: Sine
+  m_Name: Sine 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 0
+  moveSpeed: 1
   XRadius: 5
   YRadius: 5
   GravitySpeed: 0.1
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
-  GravitySpeed: 0.1
+  moveSpeed: 1
   TunnelingCooldown: 1
   LerpPower: 5
   MinTunnelingDistance: 6
@@ -288,10 +289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 0
+  moveSpeed: 1
   Frequency: 1
   Amplitude: 10
   Offset: 0
-  GravitySpeed: 1
 --- !u!212 &212295858568802486
 SpriteRenderer:
   m_ObjectHideFlags: 1
