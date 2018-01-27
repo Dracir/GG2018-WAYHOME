@@ -7,7 +7,7 @@ public class CachedBehaviour<TSelf> : MonoBehaviour where TSelf : CachedBehaviou
 		Cache<TSelf>.Instances.Add(this as TSelf);
 	}
 
-	protected virtual void OnDistable()
+	protected virtual void OnDisable()
 	{
 		Cache<TSelf>.Instances.Remove(this as TSelf);
 	}
