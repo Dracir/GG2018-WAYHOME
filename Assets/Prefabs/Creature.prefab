@@ -89,6 +89,7 @@ MonoBehaviour:
   LerpPower: 5
   MinTunnelingDistance: 6
   MaxTunnelingDistance: 6
+  originX: 0.09
 --- !u!114 &114615623028312396
 MonoBehaviour:
   m_ObjectHideFlags: 1

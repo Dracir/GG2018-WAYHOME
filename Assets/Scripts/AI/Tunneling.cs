@@ -17,18 +17,22 @@ public class Tunneling : AIMotion
 
 	float nextTunnel;
 	float direction = 1;
-	float originX;
+	public float originX;
 	float target;
 	float startTunnel;
 
-	float t = 0;
+	float t = 1;
 
 	// Use this for initialization
 	void Start()
 	{
 		ActualTunnelingDistance = Random.Range(MinTunnelingDistance, MaxTunnelingDistance);
-		originX = transform.localPosition.x;
-		transform.localPosition = new Vector3(ActualTunnelingDistance / 2, transform.localPosition.y, 0);
+		originX = transform.position.x;
+		//Debug.Log(originX);
+		//Debug.Log(CameraTop.Instance.Left + " - " + CameraTop.Instance.Right);
+		originX = Mathf.Clamp(originX,CameraTop.Instance.Left + ActualTunnelingDistance , CameraTop.Instance.Right - ActualTunnelingDistance);
+		//Debug.Log(originX);
+		transform.localPosition = new Vector3(originX + ActualTunnelingDistance / 2, transform.localPosition.y, 0);
 		target = transform.localPosition.x;
 		nextTunnel = Time.time + TunnelingCooldown;
 	}
@@ -43,7 +47,7 @@ public class Tunneling : AIMotion
 		{
 			nextTunnel = Time.time + TunnelingCooldown;
 			direction *= -1;
-			target = originX + ActualTunnelingDistance / 2 * direction;
+			target = originX - ActualTunnelingDistance / 2 * direction;
 			startTunnel = transform.localPosition.x;
 			t = 0;
 		}
