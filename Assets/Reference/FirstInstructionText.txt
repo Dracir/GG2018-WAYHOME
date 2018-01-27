@@ -1,0 +1,3 @@
+Instructions
+Hello, player one. We are the Wayhome. Don't worry about how, or why. All we gotta do is help these little guys find their way. You just let me know what there is, and I'll tell you what they need. Press A and D to move our body, and left and right to change the signal. When you're ready, I'll press A to send the signal. We can send only one signal every few seconds, so be careful.
+When you're ready to start, press D and Left.
