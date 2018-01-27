@@ -9,7 +9,7 @@ public class Creature : CachedBehaviour<Creature>
 
 	public Symbol LifeGivingHopeAndLoveSymbol;
 
-	public Symbol Symbol {get{return LifeGivingHopeAndLoveSymbol;}}
+	public Symbol Symbol { get { return LifeGivingHopeAndLoveSymbol; } }
 
 	public bool FlagQuiIndiqueQueLaCreatureEstHappy;
 

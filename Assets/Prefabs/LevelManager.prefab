@@ -52,16 +52,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - Creatures:
+  - Symbols:
+    - Symbol: 1
+      Sprite: {fileID: 21300000, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - Symbol: 2
+      Sprite: {fileID: 21300030, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
-  - Creatures:
+  - Symbols:
+    - Symbol: 3
+      Sprite: {fileID: 21300036, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
-  - Creatures:
+  - Symbols:
+    - Symbol: 2
+      Sprite: {fileID: 21300056, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - Symbol: 3
+      Sprite: {fileID: 21300070, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    - Symbol: 4
+      Sprite: {fileID: 21300064, guid: d48d397945b97c847b13a32c2ba212b9, type: 3}
+    Creatures:
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
     - {fileID: 114813218556883688, guid: a07d2d401b1c9bd47b8721ee024ea2f3, type: 2}
