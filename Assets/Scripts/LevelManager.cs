@@ -33,6 +33,7 @@ public class LevelManager : Singleton<LevelManager>
 	{
 		// TODO: Spawn at a proper position...
 		var p  = CameraTop.Instance.GetRandomInside();
+		SoundManager.Instance.Play(SoundManager.Instance.CreatureSpawn, transform.position);
 		Instantiate(creature, p, Quaternion.identity);
 	}
 }
