@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Transmitter.cs" />
      <Compile Include="Assets\Scripts\TransmitterController.cs" />
      <Compile Include="Assets\Scripts\UI\Progress.cs" />
+     <None Include="Assets\Reference\levelTemplate.txt" />
      <None Include="Assets\Resources\empty.txt" />
      <None Include="Assets\Textures\empty.txt" />
      <None Include="Assets\Scenes\empty.txt" />
