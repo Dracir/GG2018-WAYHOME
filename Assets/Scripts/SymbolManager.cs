@@ -17,7 +17,7 @@ public class SymbolManager : MonoBehaviour {
 		if(!Go) return;
 		Go = false;
 
-		if(Symbols.Count == 0)
+		/*if(Symbols.Count == 0)
 		{
 			var symbs = System.Enum.GetValues(typeof(Symbol));
 			
@@ -36,7 +36,7 @@ public class SymbolManager : MonoBehaviour {
 				so.Symbol = s;
 				so.Sprite = sprites[i++];
 			}
-		}	
+		}*/	
 	}
 
 	

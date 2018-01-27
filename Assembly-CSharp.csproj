@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\CameraBottom.cs" />
      <Compile Include="Assets\Scripts\CameraTop.cs" />
      <Compile Include="Assets\Scripts\Creature.cs" />
+     <Compile Include="Assets\Scripts\GutParticle.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\Planet.cs" />
@@ -78,11 +79,13 @@
      <Compile Include="Assets\Scripts\TransmitterController.cs" />
      <Compile Include="Assets\Scripts\UI\Progress.cs" />
      <Compile Include="Assets\Scripts\Utils\Utils.cs" />
-     <None Include="Assets\Reference\levelTemplate.txt" />
+     <None Include="Assets\Reference\nameideas.txt" />
      <None Include="Assets\Resources\empty.txt" />
+     <None Include="Assets\Reference\levelTemplate.txt" />
      <None Include="Assets\Textures\empty.txt" />
      <None Include="Assets\Scenes\empty.txt" />
      <None Include="Assets\Fonts\empty.txt" />
+     <None Include="Assets\Reference\FirstInstructionText.txt" />
      <None Include="Assets\Sounds\empty.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
