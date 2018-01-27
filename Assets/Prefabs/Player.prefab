@@ -102,6 +102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4277095792829114}
+  - component: {fileID: 114805818984872312}
   m_Layer: 0
   m_Name: Motor
   m_TagString: Untagged
@@ -118,6 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4381948610693520}
   - component: {fileID: 114406130989183432}
+  - component: {fileID: 114060599536208982}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -218,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1301731819798770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4381948610693520}
@@ -287,6 +289,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.5, y: 0.75}
   m_Direction: 1
+--- !u!114 &114060599536208982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967126557589956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d52991eb22668914692e427fbaa4c949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amplitude: {x: 0, y: 0.1}
+  Frequency: {x: 0, y: 2}
+  Center: {x: 0, y: 1.25}
+  Offset: {x: 0, y: 43.23}
 --- !u!114 &114111073926754356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,6 +425,21 @@ MonoBehaviour:
   Transmission: {fileID: 114971180879994044, guid: ca7bfc2d432f0734e9876cdd7539fdf9,
     type: 2}
   Screen: {fileID: 114406130989183432}
+--- !u!114 &114805818984872312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1530521913479772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b0ff92f713d824b910915b6110aaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amplitude: {x: 0.05, y: 0.05}
+  Frequency: {x: 3.51, y: 5}
+  Center: {x: 1, y: 1}
+  Offset: {x: 52.12, y: 21.5321}
 --- !u!212 &212233696838822554
 SpriteRenderer:
   m_ObjectHideFlags: 1
