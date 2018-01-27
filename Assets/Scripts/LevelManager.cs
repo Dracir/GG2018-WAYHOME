@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LevelManager : Singleton<LevelManager>
 {	
@@ -20,7 +21,7 @@ public class LevelManager : Singleton<LevelManager>
 
 	void Update()
 	{
-		if (Cache<Creature>.Instances.Count == 0 && Index < Levels.Length - 1 && Remaining.Count == 0)
+		if (Cache<Creature>.Instances.Where(c=>!c.FlagQuiIndiqueQueLaCreatureEstHappy).Count() == 0 && Index < Levels.Length - 1 && Remaining.Count == 0)
 		{
 			Index++;
 
@@ -28,7 +29,7 @@ public class LevelManager : Singleton<LevelManager>
 				Remaining.Enqueue(creature);
 		}
 
-		if (Cache<Creature>.Instances.Count == 0 && Remaining.Count > 0)
+		if (Cache<Creature>.Instances.Where(c=>!c.FlagQuiIndiqueQueLaCreatureEstHappy).Count() == 0 && Remaining.Count > 0)
 			Spawn(Remaining.Dequeue());
 	}
 

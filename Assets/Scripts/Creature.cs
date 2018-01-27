@@ -21,7 +21,7 @@ public class Creature : CachedBehaviour<Creature>
 		//Renderer.color = color;
 
 		// Suicide to test the level progression...
-		//StartCoroutine(SuicideRoutine());
+		// StartCoroutine(SuicideRoutine());
 	}
 
 	
@@ -42,7 +42,8 @@ public class Creature : CachedBehaviour<Creature>
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		var transmission = other.GetComponent<Transmission>();
+		//Debug.Log("KWAME : " + other.gameObject.name);
+		var transmission = other.GetComponentInParent<Transmission>();
 		if(transmission == null) return;
 
 
@@ -50,6 +51,8 @@ public class Creature : CachedBehaviour<Creature>
 			HAPPY();
 		else
 			DIE();
+
+		Destroy(transmission);
 	}
 
 	private void DIE()
@@ -58,6 +61,7 @@ public class Creature : CachedBehaviour<Creature>
 
 		ParticleManager.Instance.GutExplosion(transform.position);
 		Destroy(gameObject);
+		
 	}
 
 	private void HAPPY()
@@ -76,6 +80,8 @@ public class Creature : CachedBehaviour<Creature>
 		var scale = transform.localScale;
 		float factor = 0.2f;
 		tt.TargetScale = new Vector3(scale.x * factor, scale.y * factor, scale.z);
+
+		StartCoroutine(SuicideRoutine());
 	}
 
 	private void DesatureMoiCa(SpriteRenderer sr)
