@@ -53,9 +53,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AI\AIMotion.cs" />
      <Compile Include="Assets\Scripts\AI\SinMove.cs" />
-     <Compile Include="Assets\Scripts\AI\Tunneling.cs" />
+     <Compile Include="Assets\Scripts\AI\SpiralMove.cs" />
+     <Compile Include="Assets\Scripts\AI\TunnelingMove.cs" />
      <Compile Include="Assets\Scripts\Cache.cs" />
      <Compile Include="Assets\Scripts\CachedBehaviour.cs" />
+     <Compile Include="Assets\Scripts\CameraBottom.cs" />
      <Compile Include="Assets\Scripts\CameraTop.cs" />
      <Compile Include="Assets\Scripts\Creature.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
