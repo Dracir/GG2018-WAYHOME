@@ -32,6 +32,6 @@ public class LevelManager : Singleton<LevelManager>
 	public void Spawn(Creature creature)
 	{
 		// TODO: Spawn at a proper position...
-		Instantiate(creature, UnityEngine.Random.insideUnitCircle * 5f, Quaternion.identity);
+		Instantiate(creature, UnityEngine.Random.insideUnitCircle * 2f + new Vector2(0,5), Quaternion.identity);
 	}
 }
