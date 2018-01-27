@@ -14,7 +14,7 @@ public class Creature : CachedBehaviour<Creature>
 		Renderer.color = color;
 
 		// Suicide to test the level progression...
-		StartCoroutine(SuicideRoutine());
+		//StartCoroutine(SuicideRoutine());
 	}
 
 	IEnumerator SuicideRoutine()
