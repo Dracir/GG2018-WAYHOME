@@ -1,36 +1,49 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Transmitter : CachedBehaviour<Transmitter>
 {
-	public Symbol[] Symbols;
-	public Transmission Transmission;
-
-	public Symbol Selected
+	[Serializable]
+	public struct Pair
 	{
-		get { return Symbols[selectedIndex % Symbols.Length]; }
+		public Symbol Symbol;
+		public Sprite Sprite;
+	}
+
+	public Pair[] Symbols;
+	public Transmission Transmission;
+	public Screen Screen;
+
+	public Pair Selected
+	{
+		get { return Symbols[selectedIndex]; }
 	}
 
 	int selectedIndex;
 
-	public bool Select(int index)
+	public void Select(int index)
 	{
-		selectedIndex = Mathf.Clamp(index, 0, Symbols.Length - 1);
-		return index != selectedIndex;
+		index = Mathf.Clamp(index, 0, Symbols.Length - 1);
+		if (index != selectedIndex)
+		{
+			selectedIndex = index;
+			Screen.SetSprite(Selected.Sprite);
+		}
 	}
 
-	public bool Next()
+	public void Next()
 	{
-		return Select(selectedIndex + 1);
+		Select(selectedIndex + 1);
 	}
 
-	public bool Previous()
+	public void Previous()
 	{
-		return Select(selectedIndex - 1);
+		Select(selectedIndex - 1);
 	}
 
 	public void Transmit()
 	{
 		var transmission = Instantiate(Transmission, transform.position, transform.rotation);
-		transmission.Symbol = Selected;
+		transmission.Symbol = Selected.Symbol;
 	}
 }
