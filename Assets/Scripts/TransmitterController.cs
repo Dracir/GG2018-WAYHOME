@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class TransmitterController : CachedBehaviour<TransmitterController>
 {
 	public KeyCode Next = KeyCode.X;
 	public KeyCode Previous = KeyCode.Z;
-	public KeyCode Transmit = KeyCode.UpArrow;
+	public KeyCode[] Transmit;
 	public float Cooldown = 1f;
 	public Transmitter Transmitter;
 
@@ -21,9 +22,8 @@ public class TransmitterController : CachedBehaviour<TransmitterController>
 
 		if (transmitCounter > 0f)
 			transmitCounter -= Time.deltaTime;
-		else if (Input.GetKeyDown(Transmit))
+		else if (Transmit.Any(key => Input.GetKeyDown(key)))
 		{
-			Debug.Log("qasdfhjkl");
 			Transmitter.Transmit();
 			transmitCounter = Cooldown;
 		}

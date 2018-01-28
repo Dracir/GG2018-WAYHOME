@@ -549,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Next: 275
   Previous: 276
-  Transmit: 330
+  Transmit: 4a010000
   Cooldown: 1
   Transmitter: {fileID: 114659222701332352}
 --- !u!114 &114406130989183432
