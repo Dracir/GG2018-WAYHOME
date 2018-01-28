@@ -4,11 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class Planet : Singleton<Planet>
 {
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.S)) Shake();
-	}
-
 	public void Shake()
 	{
 		StartCoroutine(ShakeRoutine());
