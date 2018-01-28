@@ -200,7 +200,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1636989296154688}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 0
+  moveSpeed: 1
   XRadius: 5
   YRadius: 5
   GravitySpeed: 0.1
@@ -256,7 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 212439731290646002}
-  LifeGivingHopeAndLoveSymbol: 0
+  Symbol: 0
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
 --- !u!114 &114705862201690422
 MonoBehaviour:
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
-  GravitySpeed: 0.1
+  moveSpeed: 1
   TunnelingCooldown: 1
   LerpPower: 5
   MinTunnelingDistance: 6
@@ -288,10 +289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 0
+  moveSpeed: 1
   Frequency: 1
   Amplitude: 10
   Offset: 0
-  GravitySpeed: 1
 --- !u!212 &212295858568802486
 SpriteRenderer:
   m_ObjectHideFlags: 1

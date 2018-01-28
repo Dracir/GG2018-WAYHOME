@@ -17,10 +17,11 @@ public class LevelManager : Singleton<LevelManager>
 	public Level Current { get { return Index >= 0 && Index < Levels.Length ? Levels[Index] : null; } }
 	public int Index = -1;
 	public bool HasFailed { get; private set; }
+	public bool HasSucceeded { get; private set; }
 
 	void Update()
 	{
-		if (HasFailed) return;
+		if (HasFailed || HasSucceeded) return;
 
 		if (KnowledgeTree.Instance.Orbs.All(orb => orb == null))
 		{
@@ -28,11 +29,17 @@ public class LevelManager : Singleton<LevelManager>
 			Planet.Instance.TotalFailureOfDeath();
 			return;
 		}
+		else if (IsDone)
+		{
+			HasSucceeded = true;
+			Planet.Instance.TotalSuccessOfLife();
+			return;
+		}
 
 		if (Current != null)
 			ZeCamera.Instance.ChangeBackground(Current.Background);
 
-		if (Cache<Creature>.Instances.Count == 0 && Index < Levels.Length - 1)
+		if (Cache<Creature>.Instances.Count == 0 && Cache<GutParticle>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();
 	}
 

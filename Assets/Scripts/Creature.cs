@@ -6,7 +6,8 @@ public class Creature : CachedBehaviour<Creature>
 	public enum State
 	{
 		Normal,
-		Angry
+		Angry,
+		Happy
 	}
 
 	// TODO replace code with something useful...
@@ -34,6 +35,9 @@ public class Creature : CachedBehaviour<Creature>
 				body.bodyType = RigidbodyType2D.Dynamic;
 				body.AddForce(direction * 10f * Time.fixedDeltaTime, ForceMode2D.Impulse);
 				break;
+			case State.Happy:
+				// TODO give me some happy eyes.
+				break;
 		}
 	}
 
@@ -47,12 +51,12 @@ public class Creature : CachedBehaviour<Creature>
 	{
 		if (other.GetComponentInParent<Planet>() != null)
 			DIE();
-		else
+		else if (state == State.Normal)
 		{
 			var transmission = other.GetComponentInParent<Transmission>();
 			if (transmission == null) return;
 
-			if (transmission.Symbol.Equals(Symbol))
+			if (transmission.Selected.Equals(Symbol))
 				HAPPY();
 			else
 				ANGRY();
