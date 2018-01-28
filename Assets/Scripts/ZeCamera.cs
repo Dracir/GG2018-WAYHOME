@@ -8,6 +8,7 @@ public class ZeCamera : Singleton<ZeCamera>
 	public Image Noise;
 	public Image Background;
 	public Texture NothingSpriteForMask;
+	public Sprite NothingSprite;
 
 	Vector3 position;
 
@@ -40,11 +41,25 @@ public class ZeCamera : Singleton<ZeCamera>
 		Noise.gameObject.SetActive(true);
 		SoundManager.Instance.Play("noise_short", volume: 0.1f, pitch: 0.75f);
 		Background.sprite = sprite;
-		BackgroundAnimation.Instance.LeImage.sprite = BgEffect;
-		if(BgMask)
+		if (BgEffect == null)
+		{
+			BackgroundAnimation.Instance.LeImage.sprite = NothingSprite;
+		}
+		else
+		{
+			BackgroundAnimation.Instance.LeImage.sprite = BgEffect;
+		}
+		if (BgMask)
+		{
 			BackgroundAnimation.Instance.BgMaterial.SetTexture("_Mask", BgMask);
-			else
+			BackgroundAnimation.Instance.BgMaterial.SetFloat("_Actif", 1);
+		}
+		else
+		{
 			BackgroundAnimation.Instance.BgMaterial.SetTexture("_Mask", NothingSpriteForMask);
+			BackgroundAnimation.Instance.BgMaterial.SetFloat("_Actif", 0);
+		}
+
 		yield return new WaitForSeconds(0.25f);
 		Noise.gameObject.SetActive(false);
 	}
