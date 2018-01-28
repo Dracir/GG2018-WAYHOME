@@ -42,7 +42,7 @@ Shader "BackgroundAnimation"
         Cull Off
         Lighting Off
         ZWrite Off
-        Blend One OneMinusSrcAlpha
+        Blend One OneMinusDstAlpha
        // ColorMask [_ColorMask]
 
         Pass
@@ -132,7 +132,7 @@ Shader "BackgroundAnimation"
 				color.g *= color.a;
 				color.b *= color.a;
 				
-                //return fixed4(maskc.r,maskc.g,maskc.b,1);
+                return fixed4(maskc.r,maskc.g,maskc.b,1);
 				return color;
             }
         ENDCG
