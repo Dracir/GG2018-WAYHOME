@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 50013385228849026}
   - component: {fileID: 114331049833668046}
   m_Layer: 0
-  m_Name: PoulpeDustYellow (3)
+  m_Name: TriangleDustYellow (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
