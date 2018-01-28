@@ -132,8 +132,10 @@ Shader "BackgroundAnimation"
 				color.g *= color.a;
 				color.b *= color.a;
 				
+                //return fixed(0,0,0,0);
                 //return fixed4(maskc.r,maskc.g,maskc.b,1);
 				return color;
+
             }
         ENDCG
         }
