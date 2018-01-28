@@ -4,6 +4,7 @@ Shader "BackgroundAnimation"
     Properties
     {
         [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
+        _Delay ("Delay", Float) = 0.25
         _Mask ("Mask", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
 
@@ -76,6 +77,7 @@ Shader "BackgroundAnimation"
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
+            float _Delay;
             fixed4 _Color;
             fixed4 _TextureSampleAdd;
             float4 _ClipRect;
@@ -110,9 +112,9 @@ Shader "BackgroundAnimation"
                 clip (color.a - 0.001);
                 #endif
 
-				float t = fmod(5*_Time,1.5)-0.25;
-				float tg = fmod(20*_Time,1.5)-0.25;
-				float tb = fmod(50*_Time,1.5)-0.25;
+				float t = fmod(5*_Time,1 + 2*_Delay)-_Delay;
+				float tg = fmod(7*_Time,1 + 2*_Delay)-_Delay;
+				float tb = fmod(10*_Time,1 + 2*_Delay)-_Delay;
 				if((color.a == 0 && maskc.a == 0) || maskc.r == 0 && maskc.g == 0 && maskc.b == 0){
 					return half4(0,0,0,0);
 				}
