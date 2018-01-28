@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3b20c891dbfa9f34c8377ffdb5664631
+timeCreated: 1517147668
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Avocado & Lime
+  fontNames:
+  - Avocado & Lime
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
