@@ -9,6 +9,13 @@ public class SpriteAnimator : CachedBehaviour<SpriteAnimator>
 	float next;
 	int index;
 
+	protected override void OnEnable()
+	{
+		base.OnEnable();
+
+		next = Time.time;
+	}
+
 	void Update()
 	{
 		UpdateSprite();

@@ -10,25 +10,13 @@ public class Creature : CachedBehaviour<Creature>
 
 	public bool FlagQuiIndiqueQueLaCreatureEstHappy;
 
-	void Start()
-	{
-		// Change the color to differentiate creatures while there is no graphics for them...
-		//var color = UnityEngine.Random.ColorHSV();
-		//color.a = 1f;
-		//Renderer.color = color;
-
-		// Suicide to test the level progression...
-		// StartCoroutine(SuicideRoutine());
-	}
-
-
-	void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.F1))
-			HAPPY();
-		else if (Input.GetKeyDown(KeyCode.F2))
-			DIE();
-	}
+	//void Update()
+	//{
+	//	if (Input.GetKeyDown(KeyCode.F1))
+	//		HAPPY();
+	//	else if (Input.GetKeyDown(KeyCode.F2))
+	//		DIE();
+	//}
 
 	IEnumerator SuicideRoutine()
 	{
@@ -52,7 +40,7 @@ public class Creature : CachedBehaviour<Creature>
 		Destroy(transmission);
 	}
 
-	private void DIE()
+	public void DIE()
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 
@@ -61,7 +49,7 @@ public class Creature : CachedBehaviour<Creature>
 
 	}
 
-	private void HAPPY()
+	public void HAPPY()
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureHappy, transform.position);
 		FlagQuiIndiqueQueLaCreatureEstHappy = true;
