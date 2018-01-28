@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
@@ -15,22 +16,24 @@ public class LevelManager : Singleton<LevelManager>
 	public bool IsDone { get { return Index >= Levels.Length - 1 && Cache<Creature>.Instances.Count == 0; } }
 	public Level Current { get { return Index >= 0 && Index < Levels.Length ? Levels[Index] : null; } }
 	public int Index = -1;
+	public bool HasFailed { get; private set; }
 
 	void Update()
 	{
+		if (HasFailed) return;
+
+		if (KnowledgeTree.Instance.Orbs.All(orb => orb == null))
+		{
+			HasFailed = true;
+			Planet.Instance.TotalFailureOfDeath();
+			return;
+		}
+
 		if (Current != null)
 			ZeCamera.Instance.ChangeBackground(Current.Background);
 
 		if (Cache<Creature>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();
-
-		if (Input.GetKeyDown(KeyCode.F3))
-		{
-			foreach (var c in Cache<Creature>.Instances)
-			{
-				c.HAPPY();
-			}
-		}
 	}
 
 	void NextLevel()

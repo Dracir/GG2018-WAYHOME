@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class Creature : CachedBehaviour<Creature>
 {
+	public enum State
+	{
+		Normal,
+		Angry
+	}
+
 	// TODO replace code with something useful...
 	public SpriteRenderer Renderer;
 
@@ -10,13 +16,26 @@ public class Creature : CachedBehaviour<Creature>
 
 	public bool FlagQuiIndiqueQueLaCreatureEstHappy;
 
-	//void Update()
-	//{
-	//	if (Input.GetKeyDown(KeyCode.F1))
-	//		HAPPY();
-	//	else if (Input.GetKeyDown(KeyCode.F2))
-	//		DIE();
-	//}
+	State state;
+
+	void FixedUpdate()
+	{
+		switch (state)
+		{
+			case State.Normal:
+				break;
+			case State.Angry:
+				foreach (var motion in GetComponents<AIMotion>())
+					motion.enabled = false;
+				foreach (var sprite in GetComponentsInChildren<SpriteRenderer>())
+					sprite.color = Color.Lerp(sprite.color, Color.red, Time.deltaTime * 3f);
+				var direction = (Planet.Instance.transform.position - transform.position).normalized;
+				var body = GetComponent<Rigidbody2D>();
+				body.bodyType = RigidbodyType2D.Dynamic;
+				body.AddForce(direction * 10f * Time.fixedDeltaTime, ForceMode2D.Impulse);
+				break;
+		}
+	}
 
 	IEnumerator SuicideRoutine()
 	{
@@ -24,26 +43,33 @@ public class Creature : CachedBehaviour<Creature>
 		Destroy(gameObject);
 	}
 
-
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		//Debug.Log("KWAME : " + other.gameObject.name);
-		var transmission = other.GetComponentInParent<Transmission>();
-		if (transmission == null) return;
-
-
-		if (transmission.Symbol.Equals(Symbol))
-			HAPPY();
-		else
+		if (other.GetComponentInParent<Planet>() != null)
 			DIE();
+		else
+		{
+			var transmission = other.GetComponentInParent<Transmission>();
+			if (transmission == null) return;
 
-		Destroy(transmission);
+			if (transmission.Symbol.Equals(Symbol))
+				HAPPY();
+			else
+				ANGRY();
+
+			Destroy(transmission.gameObject);
+		}
+	}
+
+	public void ANGRY()
+	{
+		state = State.Angry;
 	}
 
 	public void DIE()
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
-
+		Planet.Instance.Shake();
 		ParticleManager.Instance.GutExplosion(transform.position);
 		Destroy(gameObject);
 

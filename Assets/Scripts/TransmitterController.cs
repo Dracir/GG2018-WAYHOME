@@ -17,6 +17,8 @@ public class TransmitterController : CachedBehaviour<TransmitterController>
 
 	void Update()
 	{
+		if (LevelManager.Instance.HasFailed) return;
+
 		if (transmitCounter > 0f)
 			transmitCounter -= Time.deltaTime;
 		else if (Input.GetKeyDown(Transmit))
