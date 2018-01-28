@@ -6,6 +6,7 @@ public class LevelManager : Singleton<LevelManager>
 	[Serializable]
 	public class Level
 	{
+		public Sprite Background;
 		public Symbol[] Symbols;
 		public Creature[] Creatures;
 	}
@@ -19,6 +20,9 @@ public class LevelManager : Singleton<LevelManager>
 
 	void Update()
 	{
+		if (Current != null)
+			ZeCamera.Instance.ChangeBackground(Current.Background);
+
 		if (Cache<Creature>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();
 
@@ -29,28 +33,14 @@ public class LevelManager : Singleton<LevelManager>
 				c.HAPPY();
 			}
 		}
-
-		if (SpawnIsWaitingForBloom && !BloomMoiCa.Instance.IsBlooming)
-		{
-			foreach (var creature in Levels[Index].Creatures)
-				Spawn(creature);
-
-			SpawnIsWaitingForBloom = false;
-		}
 	}
 
-	private void NextLevel()
+	void NextLevel()
 	{
-		if (SpawnIsWaitingForBloom)
-			return;
-		Debug.Log("Next level");
 		Index++;
-		SpawnIsWaitingForBloom = true;
-		if (Index > 0)
-		{
-			BloomMoiCa.Instance.StartFadeOut();
-			BloomMoiCa.Instance.FadeInAfterFade = true;
-		}
+
+		foreach (var creature in Levels[Index].Creatures)
+			Spawn(creature);
 
 	}
 

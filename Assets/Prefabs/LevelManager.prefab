@@ -52,16 +52,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - Symbols: 0000000001000000
+  - Background: {fileID: 21300000, guid: dd50f9eab0bae714d8e9f5abff07c5f2, type: 3}
+    Symbols: 0000000001000000
     Creatures:
     - {fileID: 114269223211365894, guid: cf614d032d7f5ee47bee0174cec54ec2, type: 2}
     - {fileID: 114269223211365894, guid: 1cd091a916ad6b643a6028650043525d, type: 2}
-  - Symbols: 0200000003000000
+  - Background: {fileID: 21300000, guid: 38bbd0a73ecdd864db7e1de4a30b00c2, type: 3}
+    Symbols: 0200000003000000
     Creatures:
     - {fileID: 114269223211365894, guid: 18514c462eb46de41a573d699a9ea9b6, type: 2}
     - {fileID: 114269223211365894, guid: 84446ec9d50d7e74caf17855f9c5130a, type: 2}
     - {fileID: 114269223211365894, guid: 4768ac92935d8cf48bf1a12118d5f86a, type: 2}
-  - Symbols: 04000000050000000600000007000000
+  - Background: {fileID: 21300000, guid: 1a092ca35ad729843bfd797a4a06ba95, type: 3}
+    Symbols: 04000000050000000600000007000000
     Creatures:
     - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
     - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}

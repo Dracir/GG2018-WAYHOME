@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZeCamera : Singleton<ZeCamera>
 {
 	public Transform[] Hooks;
+	public Image Noise;
+	public Image Background;
 
 	Vector3 position;
 
@@ -23,6 +26,23 @@ public class ZeCamera : Singleton<ZeCamera>
 			hookPosition.y = position.y;
 			hook.position = hookPosition;
 		}
+	}
+
+	public void ChangeBackground(Sprite sprite)
+	{
+		if (Background.sprite != sprite)
+		{
+			StopAllCoroutines();
+			StartCoroutine(ChangeBackgroundRoutine(sprite));
+		}
+	}
+
+	IEnumerator ChangeBackgroundRoutine(Sprite sprite)
+	{
+		Noise.gameObject.SetActive(true);
+		Background.sprite = sprite;
+		yield return new WaitForSeconds(0.25f);
+		Noise.gameObject.SetActive(false);
 	}
 
 	public void Shake(float amplitude, float duration)
