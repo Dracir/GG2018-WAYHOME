@@ -63,7 +63,7 @@ MonoBehaviour:
   - Background: {fileID: 21300000, guid: dd50f9eab0bae714d8e9f5abff07c5f2, type: 3}
     BackgroundMask: {fileID: 0}
     BackgroundEffect: {fileID: 0}
-    Symbols: 02000000030000000400000016000000
+    Symbols: 020000000300000004000000
     Creatures:
     - {fileID: 114795664573376152, guid: f42e45be1f1c61a418d1bc1a4069ab11, type: 2}
     - {fileID: 114747760450977360, guid: c845279ab24e1294aaf40d1bc7870e76, type: 2}
@@ -72,7 +72,7 @@ MonoBehaviour:
   - Background: {fileID: 21300000, guid: 38bbd0a73ecdd864db7e1de4a30b00c2, type: 3}
     BackgroundMask: {fileID: 0}
     BackgroundEffect: {fileID: 0}
-    Symbols: 070000000800000009000000
+    Symbols: 07000000080000000900000016000000
     Creatures:
     - {fileID: 114084996847016756, guid: 658f5484b70273146a42ad7347a3e187, type: 2}
     - {fileID: 114744500922300714, guid: d7a9f4462a6271b478d91b785ce882d5, type: 2}

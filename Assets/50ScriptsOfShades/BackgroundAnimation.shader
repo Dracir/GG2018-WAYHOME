@@ -112,9 +112,9 @@ Shader "BackgroundAnimation"
                 clip (color.a - 0.001);
                 #endif
 
-				float t = fmod(5*_Time,1 + 2*_Delay)-_Delay;
-				float tg = fmod(7*_Time,1 + 2*_Delay)-_Delay;
-				float tb = fmod(10*_Time,1 + 2*_Delay)-_Delay;
+				float t = fmod(9*5*_Time,1 + 2*_Delay)-_Delay;
+				float tg = fmod(9*7*_Time,1 + 2*_Delay)-_Delay;
+				float tb = fmod(9*10*_Time,1 + 2*_Delay)-_Delay;
 				if((color.a == 0 && maskc.a == 0) || maskc.r == 0 && maskc.g == 0 && maskc.b == 0){
 					return half4(0,0,0,0);
 				}
@@ -132,6 +132,7 @@ Shader "BackgroundAnimation"
 				color.g *= color.a;
 				color.b *= color.a;
 				
+                //return fixed4(maskc.r,maskc.g,maskc.b,1);
 				return color;
             }
         ENDCG
