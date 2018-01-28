@@ -20,8 +20,6 @@ public class PlayerController : CachedBehaviour<PlayerController>
 	void UpdatePosition()
 	{
 		var direction = Input.GetAxis("Horizontal");
-		var velocity = Player.Body.velocity;
-		velocity.x = direction * Speed * Time.fixedDeltaTime;
-		Player.Body.velocity = velocity;
+		Player.Body.AddForce(Vector2.right * direction * Speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
 	}
 }
