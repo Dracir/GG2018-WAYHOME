@@ -16,5 +16,6 @@ public class StraightMove : AIMotion {
 		
 		var y = -GravitySpeed * Time.deltaTime;
 		transform.localPosition += new Vector3(0,y,0);
+		FixPosition();
 	}
 }

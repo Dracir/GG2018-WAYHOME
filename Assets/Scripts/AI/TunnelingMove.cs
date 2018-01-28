@@ -63,5 +63,7 @@ public class TunnelingMove : AIMotion
 		var y = -GravitySpeed * Time.deltaTime;
 
 		transform.localPosition = new Vector3(x, transform.localPosition.y + y, 0);
+		
+		FixPosition();
 	}
 }

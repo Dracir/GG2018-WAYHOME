@@ -25,7 +25,7 @@ public class LevelManager : Singleton<LevelManager>
 	{
 		if (HasFailed || HasSucceeded) return;
 
-		if (KnowledgeTree.Instance.Orbs.All(orb => orb == null))
+			if (KnowledgeTree.Instance.Orbs.All(orb => orb == null))
 		{
 			HasFailed = true;
 			Planet.Instance.TotalFailureOfDeath();
