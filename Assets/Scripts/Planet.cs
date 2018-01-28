@@ -20,6 +20,35 @@ public class Planet : Singleton<Planet>
 		StartCoroutine(FailureRoutine());
 	}
 
+	public void TotalSuccessOfLife()
+	{
+		StopAllCoroutines();
+		StartCoroutine(SuccessRoutine());
+	}
+
+	IEnumerator SuccessRoutine()
+	{
+		ZeCamera.Instance.Shake(0.25f, 5f);
+		BloomMoiCa.Instance.FadeOutDuration = 5f;
+		BloomMoiCa.Instance.StartFadeOut();
+
+		BloomMoiCa.Instance.FullScreenOverlay.enabled = true;
+		var duration = 5f;
+		for (float counter = 0; counter < duration; counter += Time.deltaTime)
+		{
+			var ratio = Mathf.Clamp01(counter / duration);
+			var settings = BloomMoiCa.Instance.BloomProfile.bloom.settings;
+			settings.bloom.intensity = ratio * 25f;
+			BloomMoiCa.Instance.BloomProfile.bloom.settings = settings;
+			var color = BloomMoiCa.Instance.FullScreenOverlay.color;
+			color.a = ratio;
+			BloomMoiCa.Instance.FullScreenOverlay.color = color;
+			yield return null;
+		}
+		Application.Quit();
+		//SceneManager.LoadScene("End");
+	}
+
 	IEnumerator FailureRoutine()
 	{
 		ZeCamera.Instance.Shake(0.25f, 5f);

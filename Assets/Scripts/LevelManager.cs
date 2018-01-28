@@ -17,15 +17,22 @@ public class LevelManager : Singleton<LevelManager>
 	public Level Current { get { return Index >= 0 && Index < Levels.Length ? Levels[Index] : null; } }
 	public int Index = -1;
 	public bool HasFailed { get; private set; }
+	public bool HasSucceeded { get; private set; }
 
 	void Update()
 	{
-		if (HasFailed) return;
+		if (HasFailed || HasSucceeded) return;
 
 		if (KnowledgeTree.Instance.Orbs.All(orb => orb == null))
 		{
 			HasFailed = true;
 			Planet.Instance.TotalFailureOfDeath();
+			return;
+		}
+		else if (IsDone)
+		{
+			HasSucceeded = true;
+			Planet.Instance.TotalSuccessOfLife();
 			return;
 		}
 
