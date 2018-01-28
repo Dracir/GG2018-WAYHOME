@@ -16,8 +16,6 @@ public class LevelManager : Singleton<LevelManager>
 	public Level Current { get { return Index >= 0 && Index < Levels.Length ? Levels[Index] : null; } }
 	public int Index = -1;
 
-	private bool SpawnIsWaitingForBloom;
-
 	void Update()
 	{
 		if (Current != null)
@@ -39,19 +37,26 @@ public class LevelManager : Singleton<LevelManager>
 	{
 		Index++;
 
-		foreach (var creature in Levels[Index].Creatures)
-			Spawn(creature);
+		var level = Levels[Index];
+		for (int i = 0; i < level.Creatures.Length; i++)
+		{
+			var creature = level.Creatures[i];
+			var width = CameraTop.Instance.Right - CameraTop.Instance.Left;
+			var slice = width / level.Creatures.Length;
+			var x = CameraTop.Instance.Left + i * slice + slice / 2f;
+			var y = CameraTop.Instance.Top;
+			Spawn(new Vector2(x, y), creature);
+		}
 
 	}
 
-	public void Spawn(Creature creature)
+	public void Spawn(Vector3 position, Creature creature)
 	{
 		if (creature == null)
 		{
 			Debug.LogError("Ouf tu spawn du null toi dans le Level Manager");
 			return;
 		}
-		var position = CameraTop.Instance.GetRandomInside();
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureSpawn, transform.position);
 		Instantiate(creature, position, Quaternion.identity);
 	}
