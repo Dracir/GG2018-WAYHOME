@@ -52,26 +52,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Levels:
-  - Symbols:
-    - {fileID: 11400000, guid: 8d83d9ccacb6cab49847f7c5214760ec, type: 2}
-    - {fileID: 11400000, guid: 580eab68121100c4583004a874377c82, type: 2}
+  - Symbols: 0000000000000000
     Creatures:
-    - {fileID: 114269223211365894, guid: cdae27b9648865d409e404e1ec186026, type: 2}
-    - {fileID: 114269223211365894, guid: 99893070ed10a134ebc61d8a23bffa76, type: 2}
-  - Symbols:
-    - {fileID: 11400000, guid: 765176ebf1f9b0941a7e03a064f00d4d, type: 2}
-    - {fileID: 11400000, guid: eba059f608343074f802f07365662ec6, type: 2}
+    - {fileID: 114269223211365894, guid: cf614d032d7f5ee47bee0174cec54ec2, type: 2}
+    - {fileID: 114269223211365894, guid: 1cd091a916ad6b643a6028650043525d, type: 2}
+  - Symbols: 0000000000000000
     Creatures:
-    - {fileID: 114269223211365894, guid: fe009f4ba57290940bee33e03c47c7e1, type: 2}
-    - {fileID: 114269223211365894, guid: 3094096e54496014387803026640f826, type: 2}
-    - {fileID: 114269223211365894, guid: 2a1b280f9f8e2ed4bbaca695df874d37, type: 2}
-  - Symbols:
-    - {fileID: 11400000, guid: 61d2e14030a0c3e4caf29089ff4d5199, type: 2}
-    - {fileID: 11400000, guid: b3cf6a6c06f5e4d43a6b969e79a84056, type: 2}
-    - {fileID: 11400000, guid: 9f62b1c853194a24782bbd4fa236054b, type: 2}
-    - {fileID: 11400000, guid: 843b038f67ff3dc4197490752826848e, type: 2}
+    - {fileID: 114269223211365894, guid: 18514c462eb46de41a573d699a9ea9b6, type: 2}
+    - {fileID: 114269223211365894, guid: 84446ec9d50d7e74caf17855f9c5130a, type: 2}
+    - {fileID: 114269223211365894, guid: 4768ac92935d8cf48bf1a12118d5f86a, type: 2}
+  - Symbols: 00000000000000000000000000000000
     Creatures:
-    - {fileID: 114269223211365894, guid: 87ff1b4b63918634faaca64a9075ebe5, type: 2}
-    - {fileID: 114269223211365894, guid: 25143076b5ae59c41b235e9aea255cd2, type: 2}
-    - {fileID: 114269223211365894, guid: eaa1d872ce5ebe04b8defce41271a32c, type: 2}
+    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
+    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
   Index: -1

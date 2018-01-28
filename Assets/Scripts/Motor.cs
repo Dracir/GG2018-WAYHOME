@@ -22,6 +22,9 @@ public class Motor : CachedBehaviour<Motor>
 
 		switch (state)
 		{
+			case State.Idle:
+				Idle.sprite = Rolling.Renderer.sprite;
+				break;
 			case State.Rolling:
 				Rolling.Frequency = magnitude * Frequency;
 				break;
