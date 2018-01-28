@@ -25,9 +25,9 @@ public class AIMotion : MonoBehaviour
             case MoveSpeeds.Slow:
                 return 0.075f;
             case MoveSpeeds.Medium:
-                return 0.125f;
+                return 0.1f;
             case MoveSpeeds.Fast:
-                return 0.25f;
+                return 0.15f;
             default:
                 return 0;
         }
@@ -43,5 +43,13 @@ public class AIMotion : MonoBehaviour
 
 		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 180;
 		transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+	}
+
+    
+
+	protected void FixPosition()
+	{
+		var x = Mathf.Clamp(transform.localPosition.x,CameraTop.Instance.Left + 1 , CameraTop.Instance.Right - 1);
+		transform.localPosition = new Vector3(x,transform.position.y,0);
 	}
 }

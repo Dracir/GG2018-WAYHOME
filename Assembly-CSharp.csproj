@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\50ScriptsOfShades\BackgroundAnimation.cs" />
      <Compile Include="Assets\CreatureManager.cs" />
      <Compile Include="Assets\Scripts\AI\AIMotion.cs" />
      <Compile Include="Assets\Scripts\AI\SinMove.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\ZeCamera.cs" />
      <None Include="Assets\Reference\nameideas.txt" />
      <None Include="Assets\Reference\levelTemplate.txt" />
+     <None Include="Assets\50ScriptsOfShades\BackgroundAnimation.shader" />
      <None Include="Assets\Reference\FirstInstructionText.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

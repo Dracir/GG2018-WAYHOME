@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class StraightMove : AIMotion {
+public class BackgroundAnimation : Singleton<BackgroundAnimation> {
+
+	public Material BgMaterial;
+	public Image LeImage;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	
 	// Update is called once per frame
 	void Update () {
-		lookAtPlanet();
 		
-		var y = -GravitySpeed * Time.deltaTime;
-		transform.localPosition += new Vector3(0,y,0);
-		FixPosition();
 	}
 }

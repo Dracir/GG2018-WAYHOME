@@ -211,7 +211,7 @@ MonoBehaviour:
   LookAtThePlanet: 1
   moveSpeed: 1
   Frequency: 0.1
-  Amplitude: 10
+  Amplitude: 4
   Offset: 0
 --- !u!114 &114794161341025472
 MonoBehaviour:
