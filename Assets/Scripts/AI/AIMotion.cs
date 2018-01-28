@@ -23,7 +23,7 @@ public class AIMotion : MonoBehaviour
         switch (value)
         {
             case MoveSpeeds.Slow:
-                return 0.1f;
+                return 0.15f;
             case MoveSpeeds.Medium:
                 return 0.3f;
             case MoveSpeeds.Fast:
