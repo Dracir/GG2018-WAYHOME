@@ -52,7 +52,7 @@ public class Creature : CachedBehaviour<Creature>
 			var transmission = other.GetComponentInParent<Transmission>();
 			if (transmission == null) return;
 
-			if (transmission.Symbol.Equals(Symbol))
+			if (transmission.Selected.Equals(Symbol))
 				HAPPY();
 			else
 				ANGRY();

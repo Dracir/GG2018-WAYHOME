@@ -15,12 +15,15 @@ public class Transmission : CachedBehaviour<Transmission>
 	public float Lifetime = 5f;
 	public float Speed = 100f;
 	public Rigidbody2D Body;
-	public Symbol Symbol;
+	public SpriteRenderer Symbol;
+	public Symbol Selected { get; set; }
 
 	float counter;
 
 	void Update()
 	{
+		Symbol.sprite = SymbolManager.Instance.GetSprite(Selected);
+
 		if (counter < Lifetime)
 			counter += Time.deltaTime;
 		else

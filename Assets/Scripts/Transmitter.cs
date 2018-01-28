@@ -37,6 +37,6 @@ public class Transmitter : CachedBehaviour<Transmitter>
 		if (selectedSymbol == Symbol.None) return;
 
 		var transmission = Instantiate(Transmission, transform.position, transform.rotation);
-		transmission.Symbol = selectedSymbol;
+		transmission.Selected = selectedSymbol;
 	}
 }
