@@ -205,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1196320470745318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.52, y: 0.02, z: 0}
+  m_LocalPosition: {x: -5.8, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4541333284126746}
@@ -219,7 +219,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1595769719563674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6, y: 1.11, z: 0}
+  m_LocalPosition: {x: -3.27, y: 2.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4616907384601440}
@@ -298,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1511286106676596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.37, y: -2.86, z: 1}
+  m_LocalPosition: {x: 3.47, y: -2.13, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4511180286694406}
@@ -313,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1548348389779666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.07, y: 1.18, z: 0}
+  m_LocalPosition: {x: 3.09, y: 2.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4624475854372030}
@@ -344,7 +344,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1769241266213118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.88, y: -0.04, z: 0}
+  m_LocalPosition: {x: 4.64, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739562397793098}
@@ -505,7 +505,6 @@ MonoBehaviour:
   Amplitude: {x: 0.1, y: 0.1}
   Frequency: {x: 2.7, y: 2.3}
   Center: {x: 1, y: 1}
-  Offset: {x: 28, y: 5}
 --- !u!114 &114097236493532012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -575,7 +574,6 @@ MonoBehaviour:
   Amplitude: {x: 0.1, y: 0.1}
   Frequency: {x: 2.7, y: 2.3}
   Center: {x: 1, y: 1}
-  Offset: {x: 96, y: 75}
 --- !u!114 &114789064782876496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,7 +588,6 @@ MonoBehaviour:
   Amplitude: {x: 0.1, y: 0.1}
   Frequency: {x: 2.7, y: 2.3}
   Center: {x: 1, y: 1}
-  Offset: {x: 432, y: 12}
 --- !u!114 &114801310433163546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -605,7 +602,6 @@ MonoBehaviour:
   Amplitude: {x: 0.1, y: 0.1}
   Frequency: {x: 2.7, y: 2.3}
   Center: {x: 1, y: 1}
-  Offset: {x: 7658, y: 87}
 --- !u!114 &114902408943555156
 MonoBehaviour:
   m_ObjectHideFlags: 1

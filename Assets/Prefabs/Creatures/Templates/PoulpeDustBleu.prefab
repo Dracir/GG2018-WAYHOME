@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 114571673457010584}
   - component: {fileID: 50410148695255068}
   - component: {fileID: 114993668020235308}
+  - component: {fileID: 114869778632979614}
   m_Layer: 0
   m_Name: PoulpeDustBleu
   m_TagString: Untagged
@@ -196,7 +197,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 0.4
 --- !u!114 &114571673457010584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,6 +212,20 @@ MonoBehaviour:
   Renderer: {fileID: 212106921927531832}
   Symbol: 0
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
+--- !u!114 &114869778632979614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1090973131410558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b0ff92f713d824b910915b6110aaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amplitude: {x: 0.1, y: 0.1}
+  Frequency: {x: 3.2, y: 2.9}
+  Center: {x: 1, y: 1}
 --- !u!114 &114993668020235308
 MonoBehaviour:
   m_ObjectHideFlags: 1

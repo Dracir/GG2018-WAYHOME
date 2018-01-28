@@ -5,7 +5,13 @@ public class ScaleSinus : CachedBehaviour<ScaleSinus>
 	public Vector2 Amplitude;
 	public Vector2 Frequency;
 	public Vector2 Center;
-	public Vector2 Offset;
+
+	public Vector2 Offset { get; set; }
+
+	void Start()
+	{
+		Offset = Random.insideUnitCircle * 100f;
+	}
 
 	void Update()
 	{
