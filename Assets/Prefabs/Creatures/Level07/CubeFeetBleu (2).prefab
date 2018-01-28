@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
-  moveSpeed: 1
+  moveSpeed: 0
 --- !u!114 &114486852628318124
 MonoBehaviour:
   m_ObjectHideFlags: 1
