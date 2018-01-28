@@ -210,10 +210,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
   moveSpeed: 1
-  TunnelingCooldown: 1
-  LerpPower: 5
+  TunnelingCooldown: 3
+  LerpPower: 500
   MinTunnelingDistance: 2
-  MaxTunnelingDistance: 6
+  MaxTunnelingDistance: 5
   originX: 0
 --- !u!114 &114955771452070954
 MonoBehaviour:

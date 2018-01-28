@@ -225,7 +225,7 @@ MonoBehaviour:
   LookAtThePlanet: 1
   moveSpeed: 1
   Frequency: 0.05
-  Amplitude: 10
+  Amplitude: 3
   Offset: 0
 --- !u!212 &212417227610198444
 SpriteRenderer:
