@@ -7,6 +7,8 @@ public class PlayerController : CachedBehaviour<PlayerController>
 
 	void FixedUpdate()
 	{
+		if (LevelManager.Instance.HasFailed) return;
+
 		//UpdateRotation();
 		UpdatePosition();
 	}
