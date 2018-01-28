@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4243160026819024}
   - component: {fileID: 114084996847016756}
   - component: {fileID: 50167431975386254}
-  - component: {fileID: 114867953820665750}
+  - component: {fileID: 114400163330741760}
   m_Layer: 0
   m_Name: PoulpeCornBleu
   m_TagString: Untagged
@@ -211,7 +211,7 @@ MonoBehaviour:
   Renderer: {fileID: 212734431599774004}
   Symbol: 9
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
---- !u!114 &114867953820665750
+--- !u!114 &114400163330741760
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -219,14 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1126566918540618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f8ab7283b808f4989e57d4fc14a303, type: 3}
+  m_Script: {fileID: 11500000, guid: a7277f6b6becb78469986bafee061561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
-  moveSpeed: 0
-  Frequency: 0
-  Amplitude: 0
-  Offset: 0
+  moveSpeed: 1
 --- !u!212 &212056025678468912
 SpriteRenderer:
   m_ObjectHideFlags: 1
