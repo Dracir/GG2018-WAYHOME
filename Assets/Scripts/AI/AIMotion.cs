@@ -23,11 +23,11 @@ public class AIMotion : MonoBehaviour
         switch (value)
         {
             case MoveSpeeds.Slow:
-                return 0.5f;
+                return 0.1f;
             case MoveSpeeds.Medium:
-                return 0.8f;
+                return 0.3f;
             case MoveSpeeds.Fast:
-                return 1.1f;
+                return 0.5f;
             default:
                 return 0;
         }
@@ -41,7 +41,7 @@ public class AIMotion : MonoBehaviour
 		Vector3 diff = Planet.Instance.transform.position - transform.position;
 		diff.Normalize();
 
-		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 180;
 		transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 	}
 }
