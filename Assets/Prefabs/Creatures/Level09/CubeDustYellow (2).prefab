@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50014932950538776}
   - component: {fileID: 114704116116784348}
   m_Layer: 0
-  m_Name: PoulpeDustYellow (2)
+  m_Name: CubeDustYellow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 212386466984689414}
-  Symbol: 0
+  Symbol: 27
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
 --- !u!212 &212386466984689414
 SpriteRenderer:

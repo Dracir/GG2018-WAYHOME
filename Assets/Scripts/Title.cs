@@ -16,7 +16,7 @@ public class Title : MonoBehaviour
 
 	void Update()
 	{
-		if (Instructions.gameObject.activeSelf && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftArrow))
+		if (/*Instructions.gameObject.activeSelf && */Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftArrow))
 			SceneManager.LoadScene("Main");
 	}
 
