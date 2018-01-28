@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.PostProcessing;
 
 public class BloomMoiCa : Singleton<BloomMoiCa>
@@ -68,10 +66,10 @@ public class BloomMoiCa : Singleton<BloomMoiCa>
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.F6))
-			StartFadeIn();
-		if (Input.GetKeyDown(KeyCode.F7))
-			StartFadeOut();
+		//if (Input.GetKeyDown(KeyCode.F6))
+		//	StartFadeIn();
+		//if (Input.GetKeyDown(KeyCode.F7))
+		//	StartFadeOut();
 		if (t > 0)
 		{
 			t -= Time.deltaTime;
