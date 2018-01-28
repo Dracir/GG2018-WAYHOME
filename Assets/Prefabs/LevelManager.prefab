@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4551070141840156}
   - component: {fileID: 114210938707264656}
+  - component: {fileID: 114587565830547270}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -55,60 +56,54 @@ MonoBehaviour:
   - Background: {fileID: 21300000, guid: dd50f9eab0bae714d8e9f5abff07c5f2, type: 3}
     Symbols: 0000000001000000
     Creatures:
+    - {fileID: 114045867840051830, guid: c82d01fd65aa9ce4193e57a3c48d0ffe, type: 2}
     - {fileID: 114632603322004894, guid: 80bb5b77ca5d0c34a8426fef1be0329e, type: 2}
-    - {fileID: 114717251966891998, guid: 1734d9cd586cec149bf0e0794434435e, type: 2}
   - Background: {fileID: 21300000, guid: 38bbd0a73ecdd864db7e1de4a30b00c2, type: 3}
     Symbols: 0200000003000000
     Creatures:
-    - {fileID: 114269223211365894, guid: 18514c462eb46de41a573d699a9ea9b6, type: 2}
-    - {fileID: 114269223211365894, guid: 84446ec9d50d7e74caf17855f9c5130a, type: 2}
-    - {fileID: 114269223211365894, guid: 4768ac92935d8cf48bf1a12118d5f86a, type: 2}
+    - {fileID: 114795664573376152, guid: f42e45be1f1c61a418d1bc1a4069ab11, type: 2}
+    - {fileID: 114747760450977360, guid: c845279ab24e1294aaf40d1bc7870e76, type: 2}
   - Background: {fileID: 21300000, guid: 1a092ca35ad729843bfd797a4a06ba95, type: 3}
     Symbols: 04000000050000000600000007000000
     Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    - {fileID: 114084996847016756, guid: 658f5484b70273146a42ad7347a3e187, type: 2}
+    - {fileID: 114744500922300714, guid: d7a9f4462a6271b478d91b785ce882d5, type: 2}
+    - {fileID: 114033341599477800, guid: 4d150da4c23cbee4cadb7d6419394dc4, type: 2}
   - Background: {fileID: 21300000, guid: 972f7f7921098ea4c9cc7289c798b3ad, type: 3}
     Symbols: 04000000050000000600000007000000
     Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    - {fileID: 114275206092174610, guid: 89ed07548957da84495ff814efff7faa, type: 2}
+    - {fileID: 114200265570227952, guid: 14ea621931c61464a8d2b05b36bcbb07, type: 2}
+    - {fileID: 114106836673303430, guid: c4b8209cf70d4b64d95f145a33de1e64, type: 2}
   - Background: {fileID: 21300000, guid: 107ed3b50cd6ab546bfa580fa36a3f30, type: 3}
     Symbols: 04000000050000000600000007000000
-    Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    Creatures: []
   - Background: {fileID: 21300000, guid: 2a6943ac148551f4d85c23853c19739f, type: 3}
     Symbols: 04000000050000000600000007000000
-    Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    Creatures: []
   - Background: {fileID: 21300000, guid: 3fe15a2853e751b498d9e06f327b74c9, type: 3}
     Symbols: 04000000050000000600000007000000
-    Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    Creatures: []
   - Background: {fileID: 21300000, guid: 8668433102ad52e4d928441981ad9792, type: 3}
     Symbols: 04000000050000000600000007000000
-    Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    Creatures: []
   - Background: {fileID: 21300000, guid: 484c47cd96b9b234ab9c901ac29ea126, type: 3}
     Symbols: 04000000050000000600000007000000
     Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    - {fileID: 114717251966891998, guid: 1734d9cd586cec149bf0e0794434435e, type: 2}
   - Background: {fileID: 21300000, guid: 93201ced3289ec746a60c540b86d244a, type: 3}
     Symbols: 04000000050000000600000007000000
-    Creatures:
-    - {fileID: 114269223211365894, guid: cc757d50bd5805b42a810159734c67a6, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
-    - {fileID: 114269223211365894, guid: 846bfc474c5b9a5439037709f16bb9fe, type: 2}
+    Creatures: []
   Index: -1
+--- !u!114 &114587565830547270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1985439504183898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5876eab673092354390d52f4ada257cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GO: 0

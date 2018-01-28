@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\KnowledgeOrb.cs" />
      <Compile Include="Assets\Scripts\KnowledgeTree.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\LevelManagerLoader.cs" />
      <Compile Include="Assets\Scripts\Motor.cs" />
      <Compile Include="Assets\Scripts\ParticleManager.cs" />
      <Compile Include="Assets\Scripts\Planet.cs" />
@@ -94,7 +95,6 @@
      <None Include="Assets\Reference\levelTemplate.txt" />
      <None Include="Assets\Fonts\empty.txt" />
      <None Include="Assets\Reference\FirstInstructionText.txt" />
-     <None Include="Assets\Sounds\empty.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
