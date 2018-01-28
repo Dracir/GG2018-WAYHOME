@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Feet
+    uniqueID: 2316918363
+    locked: 0
+  - name: Body
+    uniqueID: 1446811097
+    locked: 0
+  - name: Eyes
+    uniqueID: 2449008921
+    locked: 0
+  - name: Accessory
+    uniqueID: 3400030993
+    locked: 0
