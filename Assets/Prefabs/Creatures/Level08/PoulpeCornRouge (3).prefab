@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 212235508991728076}
-  Symbol: 0
+  Symbol: 38
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
 --- !u!114 &114470419921763022
 MonoBehaviour:
