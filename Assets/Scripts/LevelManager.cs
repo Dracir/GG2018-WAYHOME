@@ -45,7 +45,6 @@ public class LevelManager : Singleton<LevelManager>
 			return;
 		Debug.Log("Next level");
 		Index++;
-		moinBug = false;
 		SpawnIsWaitingForBloom = true;
 		if (Index > 0)
 		{

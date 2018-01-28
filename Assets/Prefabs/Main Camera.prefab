@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 81257852927422258}
   - component: {fileID: 114324874836653212}
   - component: {fileID: 114174024069652466}
+  - component: {fileID: 114154580729861404}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -267,6 +268,19 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664511352579164}
   m_Enabled: 1
+--- !u!114 &114154580729861404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664511352579164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdad8f22ededddf489cab79a5caec907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hooks:
+  - {fileID: 224599063680231414}
 --- !u!114 &114156415755393672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,11 +305,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FullScreenOverlay: {fileID: 212489756948818296}
   BloomProfile: {fileID: 11400000, guid: 16232aacc53862a448f8e7f85aa0b65f, type: 2}
-  FadeInTime: 0
-  FadeOutTime: 0
-  maxBloomIntensity: 0
-  FadeInDuration: 0
-  FadeOutDuration: 0
+  maxBloomIntensity: 15
+  FadeInDuration: 1
+  FadeOutDuration: 2
+  IsBlooming: 0
+  FadeInAfterFade: 0
 --- !u!114 &114229898944012828
 MonoBehaviour:
   m_ObjectHideFlags: 1

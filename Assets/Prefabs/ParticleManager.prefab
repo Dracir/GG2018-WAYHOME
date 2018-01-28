@@ -53,3 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GutParticles:
   - {fileID: 114706639587435274, guid: 24a6ecdf1f1128a4a8300b1ebe920e98, type: 2}
+  ShardParticles:
+  - {fileID: 114127402762255162, guid: 08dacbc336e63244a91c43b04ab84701, type: 2}
+  - {fileID: 114531736442088082, guid: 4cac6201b8bb78a4688f27458a0222a3, type: 2}
+  - {fileID: 114384677154835386, guid: 9451684674e32194b915b0c5eef43f18, type: 2}
+  - {fileID: 114939513236880646, guid: 7fda1cec6f879d246887680a2336557b, type: 2}
+  - {fileID: 114801485911485436, guid: fbca8ef5284e69b4c8210504190f34cb, type: 2}
+  - {fileID: 114466037701874284, guid: 5a432b6dc3fe95644b540d6eccb84136, type: 2}
