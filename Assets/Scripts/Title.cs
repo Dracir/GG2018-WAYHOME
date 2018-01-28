@@ -48,17 +48,20 @@ public class Title : MonoBehaviour
 
 	public void OnBegin()
 	{
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
 		Instructions.gameObject.SetActive(true);
 		StartCoroutine(InstructionsRoutine());
 	}
 
 	public void OnCredits()
 	{
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
 		Credits.SetActive(true);
 	}
 
 	public void OnCreditsClose()
 	{
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
 		Credits.SetActive(false);
 	}
 }
