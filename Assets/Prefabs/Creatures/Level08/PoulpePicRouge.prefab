@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Renderer: {fileID: 212266999200028520}
-  Symbol: 0
+  Symbol: 40
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
 --- !u!212 &212266999200028520
 SpriteRenderer:

@@ -51,9 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf6705e6ca51a14c928bcf516157dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreatureDie: []
-  CreatureHappy: []
-  CreatureSpawn: []
   Clips:
   - {fileID: 8300000, guid: 682b95527f7e9f74f84cf135182c20e3, type: 3}
   - {fileID: 8300000, guid: 3c52c3206432407408535d7de50b07a5, type: 3}
@@ -66,3 +63,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 79ce05fd4f7d2264fbbae468e153f4f5, type: 3}
   - {fileID: 8300000, guid: 248f259bb9b6e644c9a74ea9d9acb0ba, type: 3}
   - {fileID: 8300000, guid: 46f02215dca030a4a819e2cccfa96d9c, type: 3}
+  Mixer: {fileID: 243090651570443702, guid: fae56fbdaa3a95141bf607222138f436, type: 2}

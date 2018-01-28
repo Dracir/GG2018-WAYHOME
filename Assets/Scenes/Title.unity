@@ -759,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064948896
 RectTransform:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 50, y: -0.0000019073486}
-  m_SizeDelta: {x: 220.70001, y: 127.1}
+  m_SizeDelta: {x: 280, y: 150}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1064948897
 MonoBehaviour:
@@ -950,7 +950,8 @@ AudioSource:
   m_GameObject: {fileID: 1206512131}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243518875225225852, guid: fae56fbdaa3a95141bf607222138f436,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: a1bed730cffae4346a76e8c440558121, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
@@ -1089,8 +1090,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Richard Rail - Programming\nTravis Henry Lee Martin - Game Design\nKevin
-    McNally-Gagnon - Programming\n\xC9lodie Marcillac - Art"
+  m_Text: "Richard Rail - Unlabeled\nTravis Henry Lee Martin - Grand Master\nKevin
+    McNally-Gagnon - Datagram\n\xC9lodie Marcillac - Dark Arts\n\nAlexandre Caron
+    - Sanity Manager\nJean-S\xE9bastien Gervais - Person of Honor\nAlexandre Lessard
+    - Thanked"
 --- !u!222 &1324546299
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1320,10 +1323,10 @@ RectTransform:
   m_Father: {fileID: 2082125053}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 154.5, y: 66.6}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -100}
+  m_SizeDelta: {x: 175, y: 85}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1973878875
 MonoBehaviour:
@@ -1336,7 +1339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b0ff92f713d824b910915b6110aaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amplitude: {x: 0.1, y: 0.1}
+  Amplitude: {x: 0.025, y: 0.025}
   Frequency: {x: 1.9, y: 1.55}
   Center: {x: 1, y: 1}
 --- !u!114 &1973878876
