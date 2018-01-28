@@ -1089,8 +1089,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Richard Rail - Programming\nTravis Henry Lee Martin - Game Design\nKevin
-    McNally-Gagnon - Programming\n\xC9lodie Marcillac - Art"
+  m_Text: "Richard Rail - Programming, Shader Artist\nTravis Henry Lee Martin - Grand
+    Master\nKevin McNally-Gagnon - Datagram\n\xC9lodie Marcillac - Dark Arts\n\nAlexandre
+    Caron - Sanity Manager\nJean-S\xE9bastien Gervais - Person of Honor\nAlexandre
+    Lessard - Thanked"
 --- !u!222 &1324546299
 CanvasRenderer:
   m_ObjectHideFlags: 0
