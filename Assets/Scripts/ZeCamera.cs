@@ -31,10 +31,7 @@ public class ZeCamera : Singleton<ZeCamera>
 	public void ChangeBackground(Sprite sprite)
 	{
 		if (Background.sprite != sprite)
-		{
-			StopAllCoroutines();
 			StartCoroutine(ChangeBackgroundRoutine(sprite));
-		}
 	}
 
 	IEnumerator ChangeBackgroundRoutine(Sprite sprite)

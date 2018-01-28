@@ -32,7 +32,7 @@ public class LevelManager : Singleton<LevelManager>
 		if (Current != null)
 			ZeCamera.Instance.ChangeBackground(Current.Background);
 
-		if (Cache<Creature>.Instances.Count == 0 && Index < Levels.Length - 1)
+		if (Cache<Creature>.Instances.Count == 0 && Cache<GutParticle>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();
 	}
 

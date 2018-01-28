@@ -47,7 +47,7 @@ public class Creature : CachedBehaviour<Creature>
 	{
 		if (other.GetComponentInParent<Planet>() != null)
 			DIE();
-		else
+		else if (state == State.Normal)
 		{
 			var transmission = other.GetComponentInParent<Transmission>();
 			if (transmission == null) return;
