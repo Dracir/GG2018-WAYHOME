@@ -57,9 +57,14 @@ public class Creature : CachedBehaviour<Creature>
 			if (transmission == null) return;
 
 			if (transmission.Selected.Equals(Symbol))
+			{
 				HAPPY();
+			}
 			else
+			{
 				ANGRY();
+				SoundManager.Instance.Play("negative", volume: 0.25f, pitch: 2f);
+			}
 
 			Destroy(transmission.gameObject);
 		}
@@ -68,10 +73,14 @@ public class Creature : CachedBehaviour<Creature>
 	public void ANGRY()
 	{
 		state = State.Angry;
+		SoundManager.Instance.Play("negative_02", volume: 0.5f, pitch: 1f);
 	}
 
 	public void DIE()
 	{
+		SoundManager.Instance.Play("squash", volume: 0.5f, pitch: 2f);
+		SoundManager.Instance.Play("squash", volume: 0.4f, pitch: 0.75f);
+		SoundManager.Instance.Play("squash", volume: 0.3f, pitch: 3f);
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 		Planet.Instance.Shake();
 		ParticleManager.Instance.GutExplosion(transform.position);
@@ -81,6 +90,7 @@ public class Creature : CachedBehaviour<Creature>
 
 	public void HAPPY()
 	{
+		SoundManager.Instance.Play("positive", volume: 0.5f, pitch: 1f);
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureHappy, transform.position);
 		FlagQuiIndiqueQueLaCreatureEstHappy = true;
 		foreach (var movementeur in GetComponents<AIMotion>())

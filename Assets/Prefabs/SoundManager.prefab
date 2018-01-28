@@ -54,3 +54,14 @@ MonoBehaviour:
   CreatureDie: []
   CreatureHappy: []
   CreatureSpawn: []
+  Clips:
+  - {fileID: 8300000, guid: 682b95527f7e9f74f84cf135182c20e3, type: 3}
+  - {fileID: 8300000, guid: 3c52c3206432407408535d7de50b07a5, type: 3}
+  - {fileID: 8300000, guid: f1d4874a89b0f75418db2a6e1a940010, type: 3}
+  - {fileID: 8300000, guid: 9914da36e06f0a94c84c427f8f478acc, type: 3}
+  - {fileID: 8300000, guid: 614f826ce3aa1504980ccb5411578374, type: 3}
+  - {fileID: 8300000, guid: ba2f2f2b70ab5904f97fd9900d975ddf, type: 3}
+  - {fileID: 8300000, guid: c2650afcc1ccf8a4f853afb9c32735e0, type: 3}
+  - {fileID: 8300000, guid: 18e8f777ef464fa47ae8a504e6b5eeea, type: 3}
+  - {fileID: 8300000, guid: 79ce05fd4f7d2264fbbae468e153f4f5, type: 3}
+  - {fileID: 8300000, guid: 248f259bb9b6e644c9a74ea9d9acb0ba, type: 3}

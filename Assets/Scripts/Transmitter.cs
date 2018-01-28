@@ -38,5 +38,6 @@ public class Transmitter : CachedBehaviour<Transmitter>
 
 		var transmission = Instantiate(Transmission, transform.position, transform.rotation);
 		transmission.Selected = selectedSymbol;
+		SoundManager.Instance.Play("transmit", volume: 0.25f, pitch: 2f);
 	}
 }

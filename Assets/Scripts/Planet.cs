@@ -31,6 +31,7 @@ public class Planet : Singleton<Planet>
 		ZeCamera.Instance.Shake(0.25f, 5f);
 		BloomMoiCa.Instance.FadeOutDuration = 5f;
 		BloomMoiCa.Instance.StartFadeOut();
+		SoundManager.Instance.Play("win", volume: 1f, pitch: 1f);
 
 		BloomMoiCa.Instance.FullScreenOverlay.enabled = true;
 		var duration = 5f;

@@ -40,6 +40,9 @@ public class KnowledgeOrb : CachedBehaviour<KnowledgeOrb>
 		{
 			ParticleManager.Instance.ShardExplosion(transform.position);
 			BloomMoiCa.Instance.StartFadeIn();
+			SoundManager.Instance.Play("glass_break", volume: 0.5f, pitch: 1f);
+			SoundManager.Instance.Play("glass_break", volume: 0.3f, pitch: 0.5f);
+			SoundManager.Instance.Play("glass_break", volume: 0.25f, pitch: 0.25f);
 			Destroy(gameObject);
 		}
 	}
