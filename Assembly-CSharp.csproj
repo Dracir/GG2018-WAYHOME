@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\SpriteAnimator.cs" />
      <Compile Include="Assets\Scripts\SymbolData.cs" />
      <Compile Include="Assets\Scripts\SymbolManager.cs" />
+     <Compile Include="Assets\Scripts\Title.cs" />
      <Compile Include="Assets\Scripts\Transitions\ColorTransition.cs" />
      <Compile Include="Assets\Scripts\Transitions\TransformTransition.cs" />
      <Compile Include="Assets\Scripts\Transmission.cs" />
@@ -93,7 +94,6 @@
      <Compile Include="Assets\Scripts\ZeCamera.cs" />
      <None Include="Assets\Reference\nameideas.txt" />
      <None Include="Assets\Reference\levelTemplate.txt" />
-     <None Include="Assets\Fonts\empty.txt" />
      <None Include="Assets\Reference\FirstInstructionText.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
