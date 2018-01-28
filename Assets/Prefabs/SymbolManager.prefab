@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c14c3bd165611745a9170ea190a6bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HappyEyes: {fileID: 21300000, guid: 6250cdf58c4ad8049975c93a1059a856, type: 3}
+  SadEyes: {fileID: 21300000, guid: e7c925116cf5b1a49b279c6ea13290b4, type: 3}
   Sprites:
   - {fileID: 21300000, guid: 236dcc7d04c9f1f46a35a5c306a96137, type: 3}
   - {fileID: 21300002, guid: 236dcc7d04c9f1f46a35a5c306a96137, type: 3}

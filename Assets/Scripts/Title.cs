@@ -6,11 +6,18 @@ using UnityEngine.UI;
 public class Title : MonoBehaviour
 {
 	public GameObject Credits;
+	public CanvasGroup Instructions;
 	public Image Overlay;
 
 	void Start()
 	{
 		StartCoroutine(FadeInRoutine());
+	}
+
+	void Update()
+	{
+		if (Instructions.gameObject.activeSelf && Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftArrow))
+			SceneManager.LoadScene("Main");
 	}
 
 	IEnumerator FadeInRoutine()
@@ -28,18 +35,33 @@ public class Title : MonoBehaviour
 		Overlay.gameObject.SetActive(false);
 	}
 
+	IEnumerator InstructionsRoutine()
+	{
+		var duration = 1f;
+		for (float counter = 0f; counter < duration; counter += Time.deltaTime)
+		{
+			var ratio = Mathf.Clamp01(counter / duration);
+			Instructions.alpha = ratio;
+			yield return null;
+		}
+	}
+
 	public void OnBegin()
 	{
-		SceneManager.LoadScene("Main");
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
+		Instructions.gameObject.SetActive(true);
+		StartCoroutine(InstructionsRoutine());
 	}
 
 	public void OnCredits()
 	{
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
 		Credits.SetActive(true);
 	}
 
 	public void OnCreditsClose()
 	{
+		SoundManager.Instance.Play("button", Camera.main.transform.position);
 		Credits.SetActive(false);
 	}
 }
