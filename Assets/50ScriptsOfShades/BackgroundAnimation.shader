@@ -15,6 +15,7 @@ Shader "BackgroundAnimation"
        // _StencilReadMask ("Stencil Read Mask", Float) = 25
 
         _ColorMask ("Color Mask", Float) = 15
+        _Actif ("Actif", Float) = 1
 
        // [Toggle(UNITY_UI_ALPHACLIP)] _UseUIAlphaClip ("Use Alpha Clip", Float) = 0
     }
@@ -77,6 +78,7 @@ Shader "BackgroundAnimation"
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
+            float _Actif;
             float _Delay;
             fixed4 _Color;
             fixed4 _TextureSampleAdd;
@@ -103,7 +105,7 @@ Shader "BackgroundAnimation"
             {
                 half4 color = (tex2D(_MainTex, IN.texcoord) + _TextureSampleAdd) * IN.color;
                 half4 maskc = (tex2D(_Mask, IN.texcoord) + _TextureSampleAdd);
-
+                
                 #ifdef UNITY_UI_CLIP_RECT
                 color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
                 #endif
@@ -132,7 +134,10 @@ Shader "BackgroundAnimation"
 				color.g *= color.a;
 				color.b *= color.a;
 				
+                //return fixed(0,0,0,0);
+                //return fixed4(maskc.r,maskc.g,maskc.b,1);
 				return color;
+
             }
         ENDCG
         }
