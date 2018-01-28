@@ -6,7 +6,7 @@ public class Transmitter : CachedBehaviour<Transmitter>
 	public Screen Screen;
 
 	int selectedIndex;
-	SymbolData selectedPair;
+	Symbol selectedSymbol;
 
 	void Update()
 	{
@@ -18,8 +18,8 @@ public class Transmitter : CachedBehaviour<Transmitter>
 		if (LevelManager.Instance.Current == null) return;
 
 		selectedIndex = Mathf.Clamp(index, 0, LevelManager.Instance.Current.Symbols.Length - 1);
-		selectedPair = LevelManager.Instance.Current.Symbols[selectedIndex];
-		Screen.Select(selectedPair);
+		selectedSymbol = LevelManager.Instance.Current.Symbols[selectedIndex];
+		Screen.Select(selectedSymbol);
 	}
 
 	public void Next()
@@ -34,9 +34,9 @@ public class Transmitter : CachedBehaviour<Transmitter>
 
 	public void Transmit()
 	{
-		if (selectedPair == null) return;
+		if (selectedSymbol == Symbol.None) return;
 
 		var transmission = Instantiate(Transmission, transform.position, transform.rotation);
-		transmission.Symbol = selectedPair.Symbol;
+		transmission.Symbol = selectedSymbol;
 	}
 }
