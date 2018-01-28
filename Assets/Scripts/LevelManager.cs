@@ -8,6 +8,8 @@ public class LevelManager : Singleton<LevelManager>
 	public class Level
 	{
 		public Sprite Background;
+		public Texture BackgroundMask;
+		public Sprite BackgroundEffect;
 		public Symbol[] Symbols;
 		public Creature[] Creatures;
 	}
@@ -37,7 +39,7 @@ public class LevelManager : Singleton<LevelManager>
 		}
 
 		if (Current != null)
-			ZeCamera.Instance.ChangeBackground(Current.Background);
+			ZeCamera.Instance.ChangeBackground(Current.Background, Current.BackgroundEffect, Current.BackgroundMask);
 
 		if (Cache<Creature>.Instances.Count == 0 && Cache<GutParticle>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();

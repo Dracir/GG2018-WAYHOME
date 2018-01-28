@@ -246,6 +246,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114119588594078160, guid: e0852477fd964f540a61724faf286957,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114351284608432656, guid: e0852477fd964f540a61724faf286957,
+        type: 2}
+      propertyPath: LeImage
+      value: 
+      objectReference: {fileID: 500963185}
+    - target: {fileID: 114154580729861404, guid: e0852477fd964f540a61724faf286957,
+        type: 2}
+      propertyPath: NothingSpriteForMask
+      value: 
+      objectReference: {fileID: 2800000, guid: 1841da9a10b24994c94718092760daca, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0852477fd964f540a61724faf286957, type: 2}
   m_IsPrefabParent: 0
@@ -291,6 +306,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 744403ae3401d5549bb741e056136bc6, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &500963185 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114119588594078160, guid: e0852477fd964f540a61724faf286957,
+    type: 2}
+  m_PrefabInternal: {fileID: 263298662}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &777693526
 Prefab:
   m_ObjectHideFlags: 0
