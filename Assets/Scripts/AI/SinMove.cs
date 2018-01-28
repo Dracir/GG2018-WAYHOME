@@ -11,6 +11,7 @@ public class SinMove : AIMotion {
 
 
 	private float lastX;
+	private float lastSin;
 	
 	void Start () {
 		var x = Mathf.Clamp(transform.position.x,CameraTop.Instance.Left + Amplitude , CameraTop.Instance.Right - Amplitude);
@@ -27,6 +28,8 @@ public class SinMove : AIMotion {
 		
 		var y = -GravitySpeed * Time.deltaTime;
 		transform.localPosition += new Vector3(lastX-x,y,0);
-		lastX = x;	
+		lastX = x;
+
+		FixPosition();
 	}
 }

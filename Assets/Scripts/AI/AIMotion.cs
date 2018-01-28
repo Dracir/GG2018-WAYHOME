@@ -44,4 +44,12 @@ public class AIMotion : MonoBehaviour
 		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 180;
 		transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 	}
+
+    
+
+	protected void FixPosition()
+	{
+		var x = Mathf.Clamp(transform.localPosition.x,CameraTop.Instance.Left + 1 , CameraTop.Instance.Right - 1);
+		transform.localPosition = new Vector3(x,transform.position.y,0);
+	}
 }

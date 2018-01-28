@@ -7,6 +7,7 @@ public class ZeCamera : Singleton<ZeCamera>
 	public Transform[] Hooks;
 	public Image Noise;
 	public Image Background;
+	public Texture NothingSpriteForMask;
 
 	Vector3 position;
 
@@ -28,17 +29,22 @@ public class ZeCamera : Singleton<ZeCamera>
 		}
 	}
 
-	public void ChangeBackground(Sprite sprite)
+	public void ChangeBackground(Sprite sprite, Sprite BgEffect, Texture BgMask)
 	{
 		if (Background.sprite != sprite)
-			StartCoroutine(ChangeBackgroundRoutine(sprite));
+			StartCoroutine(ChangeBackgroundRoutine(sprite, BgEffect, BgMask));
 	}
 
-	IEnumerator ChangeBackgroundRoutine(Sprite sprite)
+	IEnumerator ChangeBackgroundRoutine(Sprite sprite, Sprite BgEffect, Texture BgMask)
 	{
 		Noise.gameObject.SetActive(true);
 		SoundManager.Instance.Play("noise_short", volume: 0.1f, pitch: 0.75f);
 		Background.sprite = sprite;
+		BackgroundAnimation.Instance.LeImage.sprite = BgEffect;
+		if(BgMask)
+			BackgroundAnimation.Instance.BgMaterial.SetTexture("_Mask", BgMask);
+			else
+			BackgroundAnimation.Instance.BgMaterial.SetTexture("_Mask", NothingSpriteForMask);
 		yield return new WaitForSeconds(0.25f);
 		Noise.gameObject.SetActive(false);
 	}
