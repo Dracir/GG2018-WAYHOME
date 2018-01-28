@@ -23,6 +23,7 @@ public class TransmitterController : CachedBehaviour<TransmitterController>
 			transmitCounter -= Time.deltaTime;
 		else if (Input.GetKeyDown(Transmit))
 		{
+			Debug.Log("qasdfhjkl");
 			Transmitter.Transmit();
 			transmitCounter = Cooldown;
 		}
