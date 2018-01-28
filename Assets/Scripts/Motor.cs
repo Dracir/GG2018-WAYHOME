@@ -9,6 +9,7 @@ public class Motor : CachedBehaviour<Motor>
 	public SpriteRenderer Idle;
 	public SpriteAnimator Rolling;
 	public Player Player;
+	public AudioSource Sound;
 
 	State state;
 
@@ -17,6 +18,8 @@ public class Motor : CachedBehaviour<Motor>
 		var magnitude = Player.Body.velocity.x;
 		state = Mathf.Abs(magnitude) > Threshold ? State.Rolling : State.Idle;
 
+		Sound.volume = Mathf.Abs(magnitude) * 0.075f;
+		Sound.pitch = Mathf.Abs(magnitude) * 0.075f + 0.5f;
 		Idle.gameObject.SetActive(state == State.Idle);
 		Rolling.gameObject.SetActive(state == State.Rolling);
 

@@ -37,6 +37,7 @@ public class ZeCamera : Singleton<ZeCamera>
 	IEnumerator ChangeBackgroundRoutine(Sprite sprite)
 	{
 		Noise.gameObject.SetActive(true);
+		SoundManager.Instance.Play("noise_short", volume: 0.1f, pitch: 0.75f);
 		Background.sprite = sprite;
 		yield return new WaitForSeconds(0.25f);
 		Noise.gameObject.SetActive(false);
@@ -49,6 +50,7 @@ public class ZeCamera : Singleton<ZeCamera>
 
 	IEnumerator ShakeRoutine(float amplitude, float duration)
 	{
+		SoundManager.Instance.Play("earthquake", volume: 0.5f, pitch: 1f);
 		for (float counter = 0f; counter < duration; counter += Time.deltaTime)
 		{
 			transform.position = position + (Vector3)Random.insideUnitCircle * amplitude;

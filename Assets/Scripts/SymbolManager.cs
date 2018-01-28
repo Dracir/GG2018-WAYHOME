@@ -10,6 +10,8 @@ public class SymbolManager : Singleton<SymbolManager>
 		public Sprite Sprite;
 	}
 
+	public Sprite HappyEyes;
+	public Sprite SadEyes;
 	public Sprite[] Sprites;
 
 	Data[] data = new Data[0];

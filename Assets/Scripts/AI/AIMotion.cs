@@ -14,8 +14,9 @@ public class AIMotion : MonoBehaviour
 {
 
 
-	public bool LookAtThePlanet;
+	public bool LookAtThePlanet = true;
     public MoveSpeeds moveSpeed = MoveSpeeds.Medium;
+    public float GravitySpeed { get { return GetMoveSpeed(moveSpeed);}} 
 
     protected float GetMoveSpeed (MoveSpeeds value)
     {

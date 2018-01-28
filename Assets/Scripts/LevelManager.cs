@@ -41,6 +41,12 @@ public class LevelManager : Singleton<LevelManager>
 
 		if (Cache<Creature>.Instances.Count == 0 && Cache<GutParticle>.Instances.Count == 0 && Index < Levels.Length - 1)
 			NextLevel();
+
+		if (Input.GetKey(KeyCode.P) && Input.GetKeyDown(KeyCode.F12))
+		{
+			foreach (var creature in Cache<Creature>.Instances.ToArray())
+				Destroy(creature.gameObject);
+		}
 	}
 
 	void NextLevel()

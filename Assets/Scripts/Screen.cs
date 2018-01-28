@@ -23,6 +23,7 @@ public class Screen : CachedBehaviour<Screen>
 	IEnumerator SetSymbolRoutine(Sprite sprite)
 	{
 		NoiseRenderer.gameObject.SetActive(true);
+		SoundManager.Instance.Play("noise_short", volume: 0.1f, pitch: 3f);
 		yield return new WaitForSeconds(NoiseDuration);
 		NoiseRenderer.gameObject.SetActive(false);
 		SymbolRenderer.sprite = sprite;

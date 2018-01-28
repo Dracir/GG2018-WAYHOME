@@ -19,6 +19,14 @@ public class Creature : CachedBehaviour<Creature>
 
 	State state;
 
+	void Start()
+	{
+		var scaler = gameObject.AddComponent<ScaleSinus>();
+		scaler.Amplitude = new Vector2(0.1f, 0.1f);
+		scaler.Frequency = new Vector2(2.11f, 1.9f);
+		scaler.Center = new Vector2(1f, 1f);
+	}
+
 	void FixedUpdate()
 	{
 		switch (state)
@@ -36,6 +44,13 @@ public class Creature : CachedBehaviour<Creature>
 				body.AddForce(direction * 10f * Time.fixedDeltaTime, ForceMode2D.Impulse);
 				break;
 			case State.Happy:
+				var child = transform.Find("Face");
+				if (child != null)
+				{
+					var faceRenderer = child.GetComponent<SpriteRenderer>();
+					if (faceRenderer != null)
+						faceRenderer.sprite = SymbolManager.Instance.HappyEyes;
+				}
 				// TODO give me some happy eyes.
 				break;
 		}
@@ -43,7 +58,7 @@ public class Creature : CachedBehaviour<Creature>
 
 	IEnumerator SuicideRoutine()
 	{
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 		Destroy(gameObject);
 	}
 
@@ -57,9 +72,14 @@ public class Creature : CachedBehaviour<Creature>
 			if (transmission == null) return;
 
 			if (transmission.Selected.Equals(Symbol))
+			{
 				HAPPY();
+			}
 			else
+			{
 				ANGRY();
+				SoundManager.Instance.Play("negative", volume: 0.25f, pitch: 2f);
+			}
 
 			Destroy(transmission.gameObject);
 		}
@@ -68,10 +88,14 @@ public class Creature : CachedBehaviour<Creature>
 	public void ANGRY()
 	{
 		state = State.Angry;
+		SoundManager.Instance.Play("negative_02", volume: 0.5f, pitch: 1f);
 	}
 
 	public void DIE()
 	{
+		SoundManager.Instance.Play("squash", volume: 0.5f, pitch: 2f);
+		SoundManager.Instance.Play("squash", volume: 0.4f, pitch: 0.75f);
+		SoundManager.Instance.Play("squash", volume: 0.3f, pitch: 3f);
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 		Planet.Instance.Shake();
 		ParticleManager.Instance.GutExplosion(transform.position);
@@ -81,6 +105,8 @@ public class Creature : CachedBehaviour<Creature>
 
 	public void HAPPY()
 	{
+		state = State.Happy;
+		SoundManager.Instance.Play("positive", volume: 0.5f, pitch: 1f);
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureHappy, transform.position);
 		FlagQuiIndiqueQueLaCreatureEstHappy = true;
 		foreach (var movementeur in GetComponents<AIMotion>())
@@ -90,7 +116,7 @@ public class Creature : CachedBehaviour<Creature>
 			DesatureMoiCa(sr);
 
 		var tt = gameObject.AddComponent<TransformTransition>();
-		tt.Duration = 1;
+		tt.Duration = 3;
 		tt.TargetPosition = transform.position + new Vector3(0, 10, 0);
 		var scale = transform.localScale;
 		float factor = 0.2f;
