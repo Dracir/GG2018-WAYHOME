@@ -6,7 +6,8 @@ public class Creature : CachedBehaviour<Creature>
 	public enum State
 	{
 		Normal,
-		Angry
+		Angry,
+		Happy
 	}
 
 	// TODO replace code with something useful...
@@ -33,6 +34,9 @@ public class Creature : CachedBehaviour<Creature>
 				var body = GetComponent<Rigidbody2D>();
 				body.bodyType = RigidbodyType2D.Dynamic;
 				body.AddForce(direction * 10f * Time.fixedDeltaTime, ForceMode2D.Impulse);
+				break;
+			case State.Happy:
+				// TODO give me some happy eyes.
 				break;
 		}
 	}
