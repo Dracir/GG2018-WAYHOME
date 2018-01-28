@@ -52,7 +52,7 @@ public class Creature : CachedBehaviour<Creature>
 		Destroy(transmission);
 	}
 
-	private void DIE()
+	public void DIE()
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 
@@ -61,7 +61,7 @@ public class Creature : CachedBehaviour<Creature>
 
 	}
 
-	private void HAPPY()
+	public void HAPPY()
 	{
 		SoundManager.Instance.Play(SoundManager.Instance.CreatureHappy, transform.position);
 		FlagQuiIndiqueQueLaCreatureEstHappy = true;

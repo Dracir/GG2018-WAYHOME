@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\AI\SinMove.cs" />
      <Compile Include="Assets\Scripts\AI\SpiralMove.cs" />
      <Compile Include="Assets\Scripts\AI\TunnelingMove.cs" />
+     <Compile Include="Assets\Scripts\BloomMoiCa.cs" />
      <Compile Include="Assets\Scripts\Cache.cs" />
      <Compile Include="Assets\Scripts\CachedBehaviour.cs" />
      <Compile Include="Assets\Scripts\CameraBottom.cs" />
@@ -84,7 +85,6 @@
      <Compile Include="Assets\Scripts\UI\Progress.cs" />
      <Compile Include="Assets\Scripts\Utils\Utils.cs" />
      <None Include="Assets\Reference\nameideas.txt" />
-     <None Include="Assets\Resources\empty.txt" />
      <None Include="Assets\Reference\levelTemplate.txt" />
      <None Include="Assets\Textures\empty.txt" />
      <None Include="Assets\Fonts\empty.txt" />
