@@ -96,7 +96,6 @@ public class Creature : CachedBehaviour<Creature>
 		SoundManager.Instance.Play("squash", volume: 0.5f, pitch: 2f);
 		SoundManager.Instance.Play("squash", volume: 0.4f, pitch: 0.75f);
 		SoundManager.Instance.Play("squash", volume: 0.3f, pitch: 3f);
-		SoundManager.Instance.Play(SoundManager.Instance.CreatureDie, transform.position);
 		Planet.Instance.Shake();
 		ParticleManager.Instance.GutExplosion(transform.position);
 		Destroy(gameObject);
@@ -107,7 +106,6 @@ public class Creature : CachedBehaviour<Creature>
 	{
 		state = State.Happy;
 		SoundManager.Instance.Play("positive", volume: 0.5f, pitch: 1f);
-		SoundManager.Instance.Play(SoundManager.Instance.CreatureHappy, transform.position);
 		FlagQuiIndiqueQueLaCreatureEstHappy = true;
 		foreach (var movementeur in GetComponents<AIMotion>())
 			Destroy(movementeur);

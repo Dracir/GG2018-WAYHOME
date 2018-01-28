@@ -73,7 +73,7 @@ public class LevelManager : Singleton<LevelManager>
 			Debug.LogError("Ouf tu spawn du null toi dans le Level Manager");
 			return;
 		}
-		SoundManager.Instance.Play(SoundManager.Instance.CreatureSpawn, transform.position);
+		//SoundManager.Instance.Play(SoundManager.Instance.CreatureSpawn, transform.position);
 		Instantiate(creature, position, Quaternion.identity);
 	}
 }

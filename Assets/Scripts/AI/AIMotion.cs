@@ -41,7 +41,7 @@ public class AIMotion : MonoBehaviour
 		Vector3 diff = Planet.Instance.transform.position - transform.position;
 		diff.Normalize();
 
-		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg + 180;
 		transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 	}
 }

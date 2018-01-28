@@ -5,9 +5,6 @@ using UnityEngine;
 public class SoundManager : Singleton<SoundManager>
 {
 	[Space]
-	public AudioClip[] CreatureDie;
-	public AudioClip[] CreatureHappy;
-	public AudioClip[] CreatureSpawn;
 	public AudioClip[] Clips;
 
 	Dictionary<string, AudioClip> nameToClip = new Dictionary<string, AudioClip>();
