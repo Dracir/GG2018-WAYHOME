@@ -1,43 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.IO;
+using UnityEngine;
 
-[ExecuteInEditMode]
-public class SymbolManager : MonoBehaviour {
-	
-	public List<SymbolData> Symbols = new List<SymbolData>();
-
-	public bool Go;
-	
-	void Update()
+public class SymbolManager : Singleton<SymbolManager>
+{
+	public struct Data
 	{
-		if(!Go) return;
-		Go = false;
-
-		/*if(Symbols.Count == 0)
-		{
-			var symbs = System.Enum.GetValues(typeof(Symbol));
-			
-			var asss = Directory.GetFiles("Assets/Resources/Symbols/Sprites").Where(truc => truc.EndsWith("png")).ToList();
-			var sprites = new List<Sprite>();
-			sprites.Sort();
-			foreach (var ass in asss)
-			{
-				sprites.Add(AssetDatabase.LoadAssetAtPath<Sprite>(ass));	
-			}
-
-			int i = 0;
-			foreach (var s in (Symbol[])symbs)
-			{
-				var so = Utils.CreateAsset<SymbolData>("Assets/Resources/Symbols/ScriptableObject/" + s.ToString());
-				so.Symbol = s;
-				so.Sprite = sprites[i++];
-			}
-		}*/	
+		public Symbol Symbol;
+		public Sprite Sprite;
 	}
 
-	
+	public Sprite[] Sprites;
+
+	Data[] data = new Data[0];
+	Dictionary<Symbol, Data> symbolToData = new Dictionary<Symbol, Data>();
+
+	protected override void Awake()
+	{
+		base.Awake();
+
+		data = Sprites.Select((sprite, index) => new Data { Symbol = (Symbol)index, Sprite = sprite }).ToArray();
+		symbolToData = data.ToDictionary(data => data.Symbol);
+	}
+
+	public Sprite GetSprite(Symbol symbol) { return GetData(symbol).Sprite; }
+	public Data GetData(Symbol symbol) { return symbolToData[symbol]; }
 }

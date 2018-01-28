@@ -7,16 +7,16 @@ public class Screen : CachedBehaviour<Screen>
 	public Sprite[] Noise;
 	public SpriteRenderer Renderer;
 
-	SymbolData selected;
+	Symbol selected;
 
-	public void Select(SymbolData pair)
+	public void Select(Symbol symbol)
 	{
-		if (selected == pair) return;
+		if (selected == symbol) return;
 		else
 		{
-			selected = pair;
+			selected = symbol;
 			StopAllCoroutines();
-			StartCoroutine(SetSymbolRoutine(selected.Sprite));
+			StartCoroutine(SetSymbolRoutine(SymbolManager.Instance.GetSprite(selected)));
 		}
 	}
 

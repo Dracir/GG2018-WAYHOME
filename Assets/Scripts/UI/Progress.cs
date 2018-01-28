@@ -60,13 +60,11 @@ public class Progress : MonoBehaviour
 					current[j].color = Done;
 				else if (LevelManager.Instance.Index == i)
 				{
-					var index = current.Length - LevelManager.Instance.Remaining.Count - 1;
+					var index = current.Length - Cache<Creature>.Instances.Count;
 					if (index > j)
 						current[j].color = Done;
-					else if (index == j)
-						current[j].color = InProgress;
 					else
-						current[j].color = Queued;
+						current[j].color = InProgress;
 				}
 				else
 					current[j].color = Queued;
