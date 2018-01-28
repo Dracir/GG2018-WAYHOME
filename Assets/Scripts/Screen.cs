@@ -4,10 +4,10 @@ using UnityEngine;
 public class Screen : CachedBehaviour<Screen>
 {
 	public float NoiseDuration = 0.2f;
-	public Sprite[] Noise;
-	public SpriteRenderer Renderer;
+	public SpriteRenderer SymbolRenderer;
+	public SpriteRenderer NoiseRenderer;
 
-	Symbol selected;
+	Symbol selected = Symbol.None;
 
 	public void Select(Symbol symbol)
 	{
@@ -22,12 +22,9 @@ public class Screen : CachedBehaviour<Screen>
 
 	IEnumerator SetSymbolRoutine(Sprite sprite)
 	{
-		for (float counter = 0f; counter < NoiseDuration; counter += Time.deltaTime)
-		{
-			Renderer.sprite = Noise[Random.Range(0, Noise.Length)];
-			yield return null;
-		}
-
-		Renderer.sprite = sprite;
+		NoiseRenderer.gameObject.SetActive(true);
+		yield return new WaitForSeconds(NoiseDuration);
+		NoiseRenderer.gameObject.SetActive(false);
+		SymbolRenderer.sprite = sprite;
 	}
 }

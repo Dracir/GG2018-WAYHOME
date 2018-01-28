@@ -19,12 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4968375961082340}
-  - component: {fileID: 114706639587435274}
+  - component: {fileID: 114384677154835386}
   - component: {fileID: 212958073305821052}
   - component: {fileID: 58704160887036032}
   - component: {fileID: 50427561992941100}
   m_Layer: 0
-  m_Name: GutParticle
+  m_Name: ShardParticle_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1709186043628774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -54,10 +54,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 0.125
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -77,8 +77,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &114706639587435274
+  m_Radius: 0.15
+--- !u!114 &114384677154835386
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1709186043628774}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e64e27940a3f548a1b177764e85759, type: 3}
+  m_Script: {fileID: 11500000, guid: 80a555396ff9ee747b1f00b0e1155457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FadeOutTime: 1
@@ -128,8 +128,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 968e295fe2ad0974c9bd642c8d27099a, type: 3}
-  m_Color: {r: 1, g: 0.11764705, b: 0.11764705, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 50d218e1b9734814eb64b57bac03bd16, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
