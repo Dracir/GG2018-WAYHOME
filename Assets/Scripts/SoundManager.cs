@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundManager : Singleton<SoundManager>
 {
 	[Space]
 	public AudioClip[] Clips;
+	public AudioMixerGroup Mixer;
 
 	Dictionary<string, AudioClip> nameToClip = new Dictionary<string, AudioClip>();
 
@@ -50,6 +52,7 @@ public class SoundManager : Singleton<SoundManager>
 		source.pitch = pitch;
 		source.clip = clip;
 		source.volume = volume;
+		source.outputAudioMixerGroup = Mixer;
 		source.Play(delay);
 
 		newGo.AddComponent<DestroyOnAudioDone>();

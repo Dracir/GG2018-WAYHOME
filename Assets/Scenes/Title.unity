@@ -950,7 +950,8 @@ AudioSource:
   m_GameObject: {fileID: 1206512131}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243518875225225852, guid: fae56fbdaa3a95141bf607222138f436,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: a1bed730cffae4346a76e8c440558121, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
@@ -1089,10 +1090,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Richard Rail - Programming, Shader Artist\nTravis Henry Lee Martin - Grand
-    Master\nKevin McNally-Gagnon - Datagram\n\xC9lodie Marcillac - Dark Arts\n\nAlexandre
-    Caron - Sanity Manager\nJean-S\xE9bastien Gervais - Person of Honor\nAlexandre
-    Lessard - Thanked"
+  m_Text: "Richard Rail - Unlabeled\nTravis Henry Lee Martin - Grand Master\nKevin
+    McNally-Gagnon - Datagram\n\xC9lodie Marcillac - Dark Arts\n\nAlexandre Caron
+    - Sanity Manager\nJean-S\xE9bastien Gervais - Person of Honor\nAlexandre Lessard
+    - Thanked"
 --- !u!222 &1324546299
 CanvasRenderer:
   m_ObjectHideFlags: 0
