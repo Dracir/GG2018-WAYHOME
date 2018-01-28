@@ -9,12 +9,10 @@ public class SinMove : AIMotion {
 	public float Amplitude = 1;
 	public float Offset = 0;
 
-	private float GravitySpeed = 1;
 
 	private float lastX;
 	
 	void Start () {
-        GravitySpeed = GetMoveSpeed(moveSpeed);
 		var x = Mathf.Clamp(transform.position.x,CameraTop.Instance.Left + Amplitude , CameraTop.Instance.Right - Amplitude);
 		transform.position = new Vector3(x,transform.position.y);
 

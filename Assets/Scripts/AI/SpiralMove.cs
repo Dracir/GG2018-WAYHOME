@@ -7,7 +7,6 @@ public class SpiralMove : AIMotion {
 	public float XRadius;
 	public float YRadius;
 
-	public float GravitySpeed = 1;
 	public float Speed = 1;
 
 	float yCenter;

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4050477381753386}
   - component: {fileID: 114033341599477800}
   - component: {fileID: 50515177782133798}
-  - component: {fileID: 114360323436487934}
+  - component: {fileID: 114363499192949254}
   m_Layer: 0
   m_Name: PoulpePicBlue
   m_TagString: Untagged
@@ -211,7 +211,7 @@ MonoBehaviour:
   Renderer: {fileID: 212570376851682816}
   Symbol: 11
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
---- !u!114 &114360323436487934
+--- !u!114 &114363499192949254
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -219,14 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750277907173350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f8ab7283b808f4989e57d4fc14a303, type: 3}
+  m_Script: {fileID: 11500000, guid: a7277f6b6becb78469986bafee061561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   LookAtThePlanet: 1
-  moveSpeed: 0
-  Frequency: 0
-  Amplitude: 0
-  Offset: 0
+  moveSpeed: 1
 --- !u!212 &212317320797756738
 SpriteRenderer:
   m_ObjectHideFlags: 1

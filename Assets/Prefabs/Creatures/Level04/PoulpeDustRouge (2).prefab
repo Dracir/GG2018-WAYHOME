@@ -69,8 +69,7 @@ GameObject:
   - component: {fileID: 4956615101703024}
   - component: {fileID: 114200265570227952}
   - component: {fileID: 50837335524271230}
-  - component: {fileID: 114232210983578230}
-  - component: {fileID: 114236202680533280}
+  - component: {fileID: 114367367510927522}
   m_Layer: 0
   m_Name: PoulpeDustRouge (2)
   m_TagString: Untagged
@@ -212,23 +211,7 @@ MonoBehaviour:
   Renderer: {fileID: 212813240661113620}
   Symbol: 0
   FlagQuiIndiqueQueLaCreatureEstHappy: 0
---- !u!114 &114232210983578230
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1632345603477994}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5f8ab7283b808f4989e57d4fc14a303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LookAtThePlanet: 0
-  moveSpeed: 1
-  Frequency: 0
-  Amplitude: 0
-  Offset: 0
---- !u!114 &114236202680533280
+--- !u!114 &114367367510927522
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -236,12 +219,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1632345603477994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b0ff92f713d824b910915b6110aaf6, type: 3}
+  m_Script: {fileID: 11500000, guid: a7277f6b6becb78469986bafee061561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amplitude: {x: 0.1, y: 0.1}
-  Frequency: {x: 3.2, y: 2.9}
-  Center: {x: 1, y: 1}
+  LookAtThePlanet: 1
+  moveSpeed: 2
 --- !u!212 &212705500998808070
 SpriteRenderer:
   m_ObjectHideFlags: 1

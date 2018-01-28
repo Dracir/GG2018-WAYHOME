@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\AI\AIMotion.cs" />
      <Compile Include="Assets\Scripts\AI\SinMove.cs" />
      <Compile Include="Assets\Scripts\AI\SpiralMove.cs" />
+     <Compile Include="Assets\Scripts\AI\StraightMove.cs" />
      <Compile Include="Assets\Scripts\AI\TunnelingMove.cs" />
      <Compile Include="Assets\Scripts\BloomMoiCa.cs" />
      <Compile Include="Assets\Scripts\Cache.cs" />
