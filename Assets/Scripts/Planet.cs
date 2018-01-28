@@ -47,7 +47,6 @@ public class Planet : Singleton<Planet>
 		ZeCamera.Instance.Shake(0.1f, 2.5f);
 		yield return new WaitForSeconds(1f);
 		KnowledgeTree.Instance.Shake();
-		BloomMoiCa.Instance.StartFadeIn();
 		yield return new WaitForSeconds(1f);
 	}
 }
