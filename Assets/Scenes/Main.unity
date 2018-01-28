@@ -251,6 +251,12 @@ Prefab:
       propertyPath: NothingSpriteForMask
       value: 
       objectReference: {fileID: 2800000, guid: 1841da9a10b24994c94718092760daca, type: 3}
+    - target: {fileID: 114154580729861404, guid: e0852477fd964f540a61724faf286957,
+        type: 2}
+      propertyPath: NothingSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9ff8a499cbddb794da67d0143b3ed008,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0852477fd964f540a61724faf286957, type: 2}
   m_IsPrefabParent: 0
@@ -341,6 +347,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114210938707264656, guid: 31e22e72b40b68d42ba9d5afe734bff7,
+        type: 2}
+      propertyPath: Levels.Array.data[0].BackgroundMask
+      value: 
+      objectReference: {fileID: 2800000, guid: a744d9a3f941adb47b966fd0d84c9bef, type: 3}
+    - target: {fileID: 114210938707264656, guid: 31e22e72b40b68d42ba9d5afe734bff7,
+        type: 2}
+      propertyPath: Levels.Array.data[0].BackgroundEffect
+      value: 
+      objectReference: {fileID: 21300000, guid: fddbd5c9f1f1870419be47bc290c98bf,
+        type: 3}
+    - target: {fileID: 114210938707264656, guid: 31e22e72b40b68d42ba9d5afe734bff7,
+        type: 2}
+      propertyPath: Levels.Array.data[1].BackgroundMask
+      value: 
+      objectReference: {fileID: 2800000, guid: 94956c1c47eb61a41b032bc222dd69f4, type: 3}
+    - target: {fileID: 114210938707264656, guid: 31e22e72b40b68d42ba9d5afe734bff7,
+        type: 2}
+      propertyPath: Levels.Array.data[1].BackgroundEffect
+      value: 
+      objectReference: {fileID: 21300000, guid: 2e2465560fcb37c48a5d1ca416a74e5a,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31e22e72b40b68d42ba9d5afe734bff7, type: 2}
   m_IsPrefabParent: 0
